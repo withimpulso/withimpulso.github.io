@@ -1,0 +1,59 @@
+:root{
+  /* Impulso brand palette */
+  --brand-navy:#0E1A2B;
+  --brand-amber:#D9822B;
+  --brand-soft:#E6E8EB;
+
+  --navy:#0E1A2B;
+  --amber:#D9822B;
+  --soft:#E6E8EB;
+  --bg:#070B12;
+  --card:rgba(255,255,255,.06);
+  --border:rgba(255,255,255,.12);
+  --text:rgba(255,255,255,.92);
+  --muted:rgba(255,255,255,.72);
+  --muted2:rgba(255,255,255,.55);
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius: 22px;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+  background: linear-gradient(180deg, rgba(14,26,43,.95), rgba(7,11,18,.98)), radial-gradient(1200px 700px at 50% -20%, rgba(255,255,255,.12), transparent 60%),
+              radial-gradient(900px 600px at 105% 90%, rgba(255,255,255,.06), transparent 60%),
+              var(--bg);
+  color:var(--text);
+  line-height:1.65;
+}
+
+a{color:inherit; text-decoration:none}
+
+a:hover{opacity:.92}
+
+.container{max-width:1120px; margin:0 auto; padding:0 18px}
+
+h1{margin:0; font-size:30px; letter-spacing:-.3px}
+
+h2{margin:22px 0 8px; font-size:18px}
+
+p, li{color:var(--muted)}
+
+.nav{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter: blur(10px);
+  background: rgba(7,11,18,.65);
+  border-bottom:1px solid var(--border);
+}
+
+.nav-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+
+.brand{display:flex; align-items:center; gap:12px}
+
+.brand-title{font-weight:750; letter-spacing:.2px}
+
+.brand-sub{font-size:12px; color:var(--muted2); margin-top:2px}
+
+.footer{padding:22px 0; border-top:1px solid var(--border); color:var(--muted2); font-size:12px}
