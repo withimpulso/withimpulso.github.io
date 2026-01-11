@@ -5,104 +5,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>404 — Page not found | Impulso</title>
   <meta name="robots" content="noindex" />
-  <link rel="icon" href="favicon.ico">
-  <style>
-:root{
-  /* Impulso brand palette */
-  --brand-navy:#0E1A2B;
-  --brand-amber:#D9822B;
-  --brand-soft:#E6E8EB;
-
-  --navy:#0E1A2B;
-  --amber:#D9822B;
-  --soft:#E6E8EB;
-  --bg:#070B12;
-  --card:rgba(255,255,255,.06);
-  --border:rgba(255,255,255,.12);
-  --text:rgba(255,255,255,.92);
-  --muted:rgba(255,255,255,.72);
-  --muted2:rgba(255,255,255,.55);
-  --shadow: 0 10px 30px rgba(0,0,0,.35);
-  --radius: 22px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-  background: linear-gradient(180deg, rgba(14,26,43,.95), rgba(7,11,18,.98)), radial-gradient(1200px 700px at 50% -20%, rgba(255,255,255,.12), transparent 60%),
-              radial-gradient(900px 600px at 105% 90%, rgba(255,255,255,.06), transparent 60%),
-              var(--bg);
-  color:var(--text);
-  line-height:1.65;
-}
-a{color:inherit; text-decoration:none}
-a:hover{opacity:.92}
-.container{max-width:1120px; margin:0 auto; padding:0 18px}
-.nav{
-  position:sticky; top:0; z-index:50;
-  backdrop-filter: blur(10px);
-  background: rgba(7,11,18,.65);
-  border-bottom:1px solid var(--border);
-}
-.nav-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-.brand{display:flex; align-items:center; gap:12px}
-.mark{
-  width:40px; height:40px; border-radius:16px;
-  background: rgba(255,255,255,.07);
-  border:1px solid rgba(255,255,255,.12);
-  position:relative;
-}
-.mark:before{content:""; position:absolute; inset:8px; border-radius:12px; border:1px solid rgba(255,255,255,.45);}
-.mark:after{content:""; position:absolute; right:10px; top:50%; width:10px; height:10px; transform:translateY(-50%) rotate(45deg);
-  border-top:2px solid rgba(255,255,255,.75); border-right:2px solid rgba(255,255,255,.75);}
-.brand-title{font-weight:750; letter-spacing:.2px}
-.brand-sub{font-size:12px; color:var(--muted2); margin-top:2px}
-.links{display:flex; gap:18px; align-items:center}
-.links a{font-size:14px; color:var(--muted)}
-.links a:hover{color:var(--text)}
-.btn{
-  display:inline-flex; align-items:center; justify-content:center; gap:10px;
-  padding:10px 14px; border-radius:18px;
-  border:1px solid var(--border);
-  background: rgba(255,255,255,.06);
-  font-weight:650; font-size:14px;
-}
-.btn.primary{background:var(--brand-amber); color:var(--brand-navy); border-color:transparent}
-.btn.primary:hover{filter:brightness(.96)}
-.btn.ghost:hover{background:rgba(255,255,255,.09)}
-.burger{display:none}
-.mobile{display:none}
-.card{
-  border:1px solid var(--border);
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-.prose{padding:28px}
-h1{margin:0; font-size:30px; letter-spacing:-.3px}
-h2{margin:22px 0 8px; font-size:18px}
-p, li{color:var(--muted)}
-.meta{margin-top:6px; color:var(--muted2); font-size:12px}
-.footer{padding:22px 0; border-top:1px solid var(--border); color:var(--muted2); font-size:12px}
-@media (max-width: 920px){
-  .links{display:none}
-  .burger{display:inline-flex}
-  .mobile{display:block; border-top:1px solid var(--border)}
-  .mobile a{display:block; padding:12px 0; color:var(--muted)}
-  .mobile a:hover{color:var(--text)}
-}
-
-  .wrap{min-height:70vh; display:grid; place-items:center; padding:28px 0 70px;}
-  .cta{margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;}
-  .code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; color:rgba(255,255,255,.78);}
-  </style>
+  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer data-domain="withimpulso.com" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="index.html" aria-label="Impulso home">
-        <img src="impulso-logo-placeholder.svg" alt="Impulso" style="height:40px; width:auto;">
+        <img src="assets/img/impulso-logo-placeholder.svg" alt="Impulso" style="height:40px; width:auto;">
         <div>
           <div class="brand-title">Impulso</div>
           <div class="brand-sub">Direction • Momentum • Control</div>
@@ -135,5 +46,32 @@ p, li{color:var(--muted)}
     document.getElementById("path").textContent = location.pathname || "/";
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie notice">
+    <div class="cookie-inner">
+      <div class="cookie-text">
+        <strong style="color:var(--brand-soft)">This website uses functional cookies only.</strong><br />
+        We use privacy-friendly analytics (Plausible) that does not use cookies or track personal data.
+      </div>
+      <div class="cookie-actions">
+        <a class="cookie-link" href="cookies.html">Learn more</a>
+        <button class="btn primary" id="cookieOk" type="button">OK</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    const KEY = "impulso_cookie_notice_ok";
+    const banner = document.getElementById("cookieBanner");
+    const okBtn = document.getElementById("cookieOk");
+    function hideBanner(){ banner?.classList.add("hide"); }
+    try { if (localStorage.getItem(KEY) === "1") hideBanner(); } catch(e){}
+    okBtn?.addEventListener("click", () => {
+      try { localStorage.setItem(KEY, "1"); } catch(e) {}
+      hideBanner();
+    });
+  </script>
+
 </body>
 </html>

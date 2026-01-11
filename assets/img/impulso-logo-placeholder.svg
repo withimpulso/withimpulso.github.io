@@ -1,0 +1,12 @@
+<svg width="320" height="80" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="80" rx="16" fill="#0E1A2B"/>
+  <text x="28" y="52"
+        font-family="Inter, Segoe UI, Roboto, Arial, sans-serif"
+        font-size="36"
+        font-weight="700"
+        fill="#E6E8EB"
+        letter-spacing="0.5">
+    Impulso
+  </text>
+  <circle cx="255" cy="40" r="6" fill="#D9822B"/>
+</svg>

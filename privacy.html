@@ -1,105 +1,21 @@
 <!doctype html>
-<html lang="nl">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Privacyverklaring | Impulso</title>
-  <meta name="description" content="Laatst bijgewerkt: [vul datum in]" />
-  <link rel="icon" href="favicon.ico">
+  <title>Privacy Policy | Impulso</title>
+  <meta name="description" content="How Impulso processes personal data." />
+  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <style>
-:root{
-  /* Impulso brand palette */
-  --brand-navy:#0E1A2B;
-  --brand-amber:#D9822B;
-  --brand-soft:#E6E8EB;
-
-  --navy:#0E1A2B;
-  --amber:#D9822B;
-  --soft:#E6E8EB;
-  --bg:#070B12;
-  --card:rgba(255,255,255,.06);
-  --border:rgba(255,255,255,.12);
-  --text:rgba(255,255,255,.92);
-  --muted:rgba(255,255,255,.72);
-  --muted2:rgba(255,255,255,.55);
-  --shadow: 0 10px 30px rgba(0,0,0,.35);
-  --radius: 22px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-  background: linear-gradient(180deg, rgba(14,26,43,.95), rgba(7,11,18,.98)), radial-gradient(1200px 700px at 50% -20%, rgba(255,255,255,.12), transparent 60%),
-              radial-gradient(900px 600px at 105% 90%, rgba(255,255,255,.06), transparent 60%),
-              var(--bg);
-  color:var(--text);
-  line-height:1.65;
-}
-a{color:inherit; text-decoration:none}
-a:hover{opacity:.92}
-.container{max-width:1120px; margin:0 auto; padding:0 18px}
-.nav{
-  position:sticky; top:0; z-index:50;
-  backdrop-filter: blur(10px);
-  background: rgba(7,11,18,.65);
-  border-bottom:1px solid var(--border);
-}
-.nav-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-.brand{display:flex; align-items:center; gap:12px}
-.mark{
-  width:40px; height:40px; border-radius:16px;
-  background: rgba(255,255,255,.07);
-  border:1px solid rgba(255,255,255,.12);
-  position:relative;
-}
-.mark:before{content:""; position:absolute; inset:8px; border-radius:12px; border:1px solid rgba(255,255,255,.45);}
-.mark:after{content:""; position:absolute; right:10px; top:50%; width:10px; height:10px; transform:translateY(-50%) rotate(45deg);
-  border-top:2px solid rgba(255,255,255,.75); border-right:2px solid rgba(255,255,255,.75);}
-.brand-title{font-weight:750; letter-spacing:.2px}
-.brand-sub{font-size:12px; color:var(--muted2); margin-top:2px}
-.links{display:flex; gap:18px; align-items:center}
-.links a{font-size:14px; color:var(--muted)}
-.links a:hover{color:var(--text)}
-.btn{
-  display:inline-flex; align-items:center; justify-content:center; gap:10px;
-  padding:10px 14px; border-radius:18px;
-  border:1px solid var(--border);
-  background: rgba(255,255,255,.06);
-  font-weight:650; font-size:14px;
-}
-.btn.primary{background:var(--brand-amber); color:var(--brand-navy); border-color:transparent}
-.btn.primary:hover{filter:brightness(.96)}
-.btn.ghost:hover{background:rgba(255,255,255,.09)}
-.burger{display:none}
-.mobile{display:none}
-.card{
-  border:1px solid var(--border);
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-.prose{padding:28px}
-h1{margin:0; font-size:30px; letter-spacing:-.3px}
-h2{margin:22px 0 8px; font-size:18px}
-p, li{color:var(--muted)}
-.meta{margin-top:6px; color:var(--muted2); font-size:12px}
-.footer{padding:22px 0; border-top:1px solid var(--border); color:var(--muted2); font-size:12px}
-@media (max-width: 920px){
-  .links{display:none}
-  .burger{display:inline-flex}
-  .mobile{display:block; border-top:1px solid var(--border)}
-  .mobile a{display:block; padding:12px 0; color:var(--muted)}
-  .mobile a:hover{color:var(--text)}
-}
-</style>
+  <script defer data-domain="withimpulso.com" src="https://plausible.io/js/script.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="index.html" aria-label="Impulso home">
-        <img src="impulso-logo-placeholder.svg" alt="Impulso" style="height:40px; width:auto;">
+        <img src="assets/img/impulso-logo-placeholder.svg" alt="Impulso" style="height:40px; width:auto;">
         <div>
           <div class="brand-title">Impulso</div>
           <div class="brand-sub">Direction • Momentum • Control</div>
@@ -108,16 +24,19 @@ p, li{color:var(--muted)}
 
       <nav class="links" aria-label="Primary">
         <a href="index.html#services">Services</a>
+        <a href="training.html">Training</a>
         <a href="index.html#approach">Approach</a>
         <a href="index.html#about">About</a>
         <a href="index.html#contact">Contact</a>
         <a class="btn primary" href="index.html#contact">Let’s talk →</a>
       </nav>
 
-      <button class="btn ghost burger" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
+      <button class="btn burger" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
     </div>
+
     <div class="container mobile" id="mobileMenu" hidden>
       <a href="index.html#services">Services</a>
+      <a href="training.html">Training</a>
       <a href="index.html#approach">Approach</a>
       <a href="index.html#about">About</a>
       <a href="index.html#contact">Contact</a>
@@ -127,59 +46,82 @@ p, li{color:var(--muted)}
 
   <main class="container" style="padding:28px 0 70px;">
     <div class="card prose">
-      <h1>Privacyverklaring</h1>
-      <div class="meta">Laatst bijgewerkt: [vul datum in]</div>
-      <p>In deze privacyverklaring leggen wij uit hoe <strong>Impulso</strong> (“wij”, “ons”) persoonsgegevens verwerkt wanneer je onze website bezoekt, contact opneemt of klant wordt. Wij verwerken persoonsgegevens in overeenstemming met de <strong>Algemene Verordening Gegevensbescherming (AVG)</strong>.</p>
+      <h1>Privacy Policy</h1>
+      <div class="meta">Last updated: [fill in date]</div>
+      
+<p>This website is operated by <strong>Impulso</strong> (“we”, “us”). We respect your privacy and process personal data in accordance with the <strong>General Data Protection Regulation (GDPR)</strong>.</p>
+<p>This Privacy Policy explains how we collect, use, and protect personal data when you visit our website, contact us, or engage our services.</p>
 
-<h2>1. Wie is verantwoordelijk?</h2>
+<h2>1. Data controller</h2>
 <p>
-Verwerkingsverantwoordelijke: <strong>Impulso</strong><br/>
-Vestigingsadres: <strong>Emmalaan 2, 2421 CP, Nieuwkoop, The Netherlands</strong><br/>
-KvK-nummer: <strong>83253475</strong><br/>
-E-mail: <a href="mailto:hello@withimpulso.com"><strong>hello@withimpulso.com</strong></a>
+<strong>Impulso</strong><br>
+Email: <a href="mailto:hello@withimpulso.com">hello@withimpulso.com</a><br>
+Website: https://withimpulso.com<br>
+KvK number: <strong>83253475</strong><br>
+Registered address: <strong>Emmalaan 2, 2421 CP, Nieuwkoop, The Netherlands</strong>
 </p>
 
-<h2>2. Welke persoonsgegevens verwerken wij?</h2>
+<h2>2. Personal data we process</h2>
 <ul>
-  <li><strong>Contactgegevens</strong> (naam, e-mailadres, organisatie) bij contact/offerte.</li>
-  <li><strong>Communicatie-inhoud</strong> (je bericht) via e-mail of formulier.</li>
-  <li><strong>Facturatiegegevens</strong> (adres, btw-nummer, betaalgegevens) indien klant.</li>
-  <li><strong>Technische gegevens</strong> (bijv. IP-adres) voor beveiliging/basisfunctionaliteit.</li>
+  <li><strong>Contact details</strong> (name, email address, company) when you contact us.</li>
+  <li><strong>Communication content</strong> (messages sent via email or contact forms).</li>
+  <li><strong>Client and invoicing data</strong> if you become a customer.</li>
+  <li><strong>Technical data</strong> (such as IP address) strictly for security and functionality.</li>
 </ul>
 
-<h2>3. Doeleinden en grondslagen</h2>
+<h2>3. Purposes and legal basis</h2>
 <ul>
-  <li><strong>Contact en dienstverlening</strong> (uitvoering overeenkomst / precontractueel).</li>
-  <li><strong>Offertes en projectcommunicatie</strong> (uitvoering overeenkomst / gerechtvaardigd belang).</li>
-  <li><strong>Facturatie en administratie</strong> (wettelijke verplichting).</li>
-  <li><strong>Beveiliging</strong> (gerechtvaardigd belang).</li>
+  <li>Responding to inquiries and contact requests (pre-contractual steps / legitimate interest).</li>
+  <li>Providing consultancy and training services (performance of a contract).</li>
+  <li>Invoicing and financial administration (legal obligation).</li>
+  <li>Security and continuity of our website (legitimate interest).</li>
 </ul>
 
-<h2>4. Bewaartermijnen</h2>
+<h2>4. Retention</h2>
 <ul>
-  <li>Contact-/offertegegevens: maximaal <strong>[bijv. 12 maanden]</strong> na laatste contact.</li>
-  <li>Facturen/boekhouding: <strong>7 jaar</strong> (fiscale bewaarplicht).</li>
+  <li>Contact and inquiry data: up to <strong>12 months</strong> after last contact.</li>
+  <li>Contract and invoicing data: <strong>7 years</strong> (statutory obligation).</li>
 </ul>
 
-<h2>5. Delen met derden</h2>
-<p>Wij delen persoonsgegevens alleen als dit nodig is voor onze dienstverlening of wettelijk verplicht is. Met verwerkers sluiten wij waar nodig een verwerkersovereenkomst.</p>
+<h2>5. Sharing data with third parties</h2>
+<p>We only share personal data with third parties when necessary to deliver our services or to comply with legal obligations. Where required, we enter into data processing agreements with processors.</p>
 
-<h2>6. Jouw rechten</h2>
-<p>Je hebt recht op inzage, correctie, verwijdering, beperking, bezwaar en gegevensoverdraagbaarheid. Verzoeken kun je mailen naar <a href="mailto:hello@withimpulso.com">hello@withimpulso.com</a>.</p>
+<h2>6. Your rights</h2>
+<p>You have the right to access, correct, delete, restrict or object to processing, and request data portability. Requests can be sent to <a href="mailto:hello@withimpulso.com">hello@withimpulso.com</a>.</p>
 
-<h2>7. Klachten</h2>
-<p>Je kunt een klacht indienen bij de <strong>Autoriteit Persoonsgegevens</strong>.</p>
+<h2>7. Complaints</h2>
+<p>If you believe your rights have been violated, you may file a complaint with the <strong>Dutch Data Protection Authority (Autoriteit Persoonsgegevens)</strong>.</p>
+
+<h2>8. Changes</h2>
+<p>This policy may be updated from time to time. The most recent version will always be published on this website.</p>
+
       <div class="meta" style="margin-top:22px;">
-        <a href="index.html">← Terug naar home</a>
+        <a href="index.html">← Back to home</a>
       </div>
     </div>
   </main>
 
   <div class="footer">
     <div class="container">
-      © <span id="year"></span> Impulso • <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a> • <a href="cookies.html">Cookies</a> • <a href="disclaimer.html">Disclaimer</a>
+      © <span id="year"></span> Impulso • <a href="training.html">Training</a> • <a href="privacy.html">Privacy</a> •
+      <a href="terms.html">Terms</a> • <a href="cookies.html">Cookies</a> • <a href="disclaimer.html">Disclaimer</a>
     </div>
   </div>
+
+  
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie notice">
+    <div class="cookie-inner">
+      <div class="cookie-text">
+        <strong style="color:var(--brand-soft)">This website uses functional cookies only.</strong><br />
+        We use privacy-friendly analytics (Plausible) that does not use cookies or track personal data.
+      </div>
+      <div class="cookie-actions">
+        <a class="cookie-link" href="cookies.html">Learn more</a>
+        <button class="btn primary" id="cookieOk" type="button">OK</button>
+      </div>
+    </div>
+  </div>
+
 
   <script>
     const btn = document.getElementById('menuBtn');
@@ -193,6 +135,16 @@ E-mail: <a href="mailto:hello@withimpulso.com"><strong>hello@withimpulso.com</st
       mobile.setAttribute('hidden',''); btn.setAttribute('aria-expanded','false');
     }));
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const KEY = "impulso_cookie_notice_ok";
+    const banner = document.getElementById("cookieBanner");
+    const okBtn = document.getElementById("cookieOk");
+    function hideBanner(){ banner?.classList.add("hide"); }
+    try { if (localStorage.getItem(KEY) === "1") hideBanner(); } catch(e){}
+    okBtn?.addEventListener("click", () => {
+      try { localStorage.setItem(KEY, "1"); } catch(e) {}
+      hideBanner();
+    });
   </script>
 </body>
 </html>
