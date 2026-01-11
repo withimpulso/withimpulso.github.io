@@ -1,1 +1,193 @@
-<h1>Privacy Policy</h1><p>AVG/GDPR compliant privacy statement.</p>
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacyverklaring | Impulso</title>
+  <meta name="description" content="Laatst bijgewerkt: [vul datum in]" />
+  <link rel="icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+  <style>
+:root{
+  --navy:#0E1A2B;
+  --amber:#D9822B;
+  --soft:#E6E8EB;
+  --bg:#070B12;
+  --card:rgba(255,255,255,.06);
+  --border:rgba(255,255,255,.12);
+  --text:rgba(255,255,255,.92);
+  --muted:rgba(255,255,255,.72);
+  --muted2:rgba(255,255,255,.55);
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius: 22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+  background: radial-gradient(1200px 700px at 50% -20%, rgba(255,255,255,.12), transparent 60%),
+              radial-gradient(900px 600px at 105% 90%, rgba(255,255,255,.06), transparent 60%),
+              var(--bg);
+  color:var(--text);
+  line-height:1.65;
+}
+a{color:inherit; text-decoration:none}
+a:hover{opacity:.92}
+.container{max-width:1120px; margin:0 auto; padding:0 18px}
+.nav{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter: blur(10px);
+  background: rgba(7,11,18,.65);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+.brand{display:flex; align-items:center; gap:12px}
+.mark{
+  width:40px; height:40px; border-radius:16px;
+  background: rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+  position:relative;
+}
+.mark:before{content:""; position:absolute; inset:8px; border-radius:12px; border:1px solid rgba(255,255,255,.45);}
+.mark:after{content:""; position:absolute; right:10px; top:50%; width:10px; height:10px; transform:translateY(-50%) rotate(45deg);
+  border-top:2px solid rgba(255,255,255,.75); border-right:2px solid rgba(255,255,255,.75);}
+.brand-title{font-weight:750; letter-spacing:.2px}
+.brand-sub{font-size:12px; color:var(--muted2); margin-top:2px}
+.links{display:flex; gap:18px; align-items:center}
+.links a{font-size:14px; color:var(--muted)}
+.links a:hover{color:var(--text)}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  padding:10px 14px; border-radius:18px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.06);
+  font-weight:650; font-size:14px;
+}
+.btn.primary{background:#fff; color:#0b1220; border-color:transparent}
+.btn.primary:hover{filter:brightness(.96)}
+.btn.ghost:hover{background:rgba(255,255,255,.09)}
+.burger{display:none}
+.mobile{display:none}
+.card{
+  border:1px solid var(--border);
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.prose{padding:28px}
+h1{margin:0; font-size:30px; letter-spacing:-.3px}
+h2{margin:22px 0 8px; font-size:18px}
+p, li{color:var(--muted)}
+.meta{margin-top:6px; color:var(--muted2); font-size:12px}
+.footer{padding:22px 0; border-top:1px solid var(--border); color:var(--muted2); font-size:12px}
+@media (max-width: 920px){
+  .links{display:none}
+  .burger{display:inline-flex}
+  .mobile{display:block; border-top:1px solid var(--border)}
+  .mobile a{display:block; padding:12px 0; color:var(--muted)}
+  .mobile a:hover{color:var(--text)}
+}
+</style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Impulso home">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <div class="brand-title">Impulso</div>
+          <div class="brand-sub">Direction • Momentum • Control</div>
+        </div>
+      </a>
+
+      <nav class="links" aria-label="Primary">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#approach">Approach</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="btn primary" href="index.html#contact">Let’s talk →</a>
+      </nav>
+
+      <button class="btn ghost burger" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
+    </div>
+    <div class="container mobile" id="mobileMenu" hidden>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#approach">Approach</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="btn primary" style="margin:10px 0 16px;" href="index.html#contact">Let’s talk →</a>
+    </div>
+  </header>
+
+  <main class="container" style="padding:28px 0 70px;">
+    <div class="card prose">
+      <h1>Privacyverklaring</h1>
+      <div class="meta">Laatst bijgewerkt: [vul datum in]</div>
+      <p>In deze privacyverklaring leggen wij uit hoe <strong>Impulso</strong> (“wij”, “ons”) persoonsgegevens verwerkt wanneer je onze website bezoekt, contact opneemt of klant wordt. Wij verwerken persoonsgegevens in overeenstemming met de <strong>Algemene Verordening Gegevensbescherming (AVG)</strong>.</p>
+
+<h2>1. Wie is verantwoordelijk?</h2>
+<p>
+Verwerkingsverantwoordelijke: <strong>[Impulso / juridische entiteit]</strong><br/>
+Vestigingsadres: <strong>[adres]</strong><br/>
+KvK-nummer: <strong>[KvK]</strong><br/>
+E-mail: <a href="mailto:jeroen@withimpulso.com"><strong>jeroen@withimpulso.com</strong></a>
+</p>
+
+<h2>2. Welke persoonsgegevens verwerken wij?</h2>
+<ul>
+  <li><strong>Contactgegevens</strong> (naam, e-mailadres, organisatie) bij contact/offerte.</li>
+  <li><strong>Communicatie-inhoud</strong> (je bericht) via e-mail of formulier.</li>
+  <li><strong>Facturatiegegevens</strong> (adres, btw-nummer, betaalgegevens) indien klant.</li>
+  <li><strong>Technische gegevens</strong> (bijv. IP-adres) voor beveiliging/basisfunctionaliteit.</li>
+</ul>
+
+<h2>3. Doeleinden en grondslagen</h2>
+<ul>
+  <li><strong>Contact en dienstverlening</strong> (uitvoering overeenkomst / precontractueel).</li>
+  <li><strong>Offertes en projectcommunicatie</strong> (uitvoering overeenkomst / gerechtvaardigd belang).</li>
+  <li><strong>Facturatie en administratie</strong> (wettelijke verplichting).</li>
+  <li><strong>Beveiliging</strong> (gerechtvaardigd belang).</li>
+</ul>
+
+<h2>4. Bewaartermijnen</h2>
+<ul>
+  <li>Contact-/offertegegevens: maximaal <strong>[bijv. 12 maanden]</strong> na laatste contact.</li>
+  <li>Facturen/boekhouding: <strong>7 jaar</strong> (fiscale bewaarplicht).</li>
+</ul>
+
+<h2>5. Delen met derden</h2>
+<p>Wij delen persoonsgegevens alleen als dit nodig is voor onze dienstverlening of wettelijk verplicht is. Met verwerkers sluiten wij waar nodig een verwerkersovereenkomst.</p>
+
+<h2>6. Jouw rechten</h2>
+<p>Je hebt recht op inzage, correctie, verwijdering, beperking, bezwaar en gegevensoverdraagbaarheid. Verzoeken kun je mailen naar <a href="mailto:jeroen@withimpulso.com">jeroen@withimpulso.com</a>.</p>
+
+<h2>7. Klachten</h2>
+<p>Je kunt een klacht indienen bij de <strong>Autoriteit Persoonsgegevens</strong>.</p>
+      <div class="meta" style="margin-top:22px;">
+        <a href="index.html">← Terug naar home</a>
+      </div>
+    </div>
+  </main>
+
+  <div class="footer">
+    <div class="container">
+      © <span id="year"></span> Impulso • <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a> • <a href="cookies.html">Cookies</a> • <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const mobile = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => {
+      const isOpen = mobile.hasAttribute('hidden') === false;
+      if (isOpen) { mobile.setAttribute('hidden',''); btn.setAttribute('aria-expanded','false'); }
+      else { mobile.removeAttribute('hidden'); btn.setAttribute('aria-expanded','true'); }
+    });
+    mobile?.querySelectorAll('a')?.forEach(a => a.addEventListener('click', () => {
+      mobile.setAttribute('hidden',''); btn.setAttribute('aria-expanded','false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

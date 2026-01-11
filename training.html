@@ -3,12 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Impulso — Controlled Momentum for modern work." />
-  <title>Impulso — Controlled Momentum</title>
+  <title>Training | Impulso</title>
+  <meta name="description" content="Practical Modern Workplace training with Controlled Momentum." />
   <link rel="icon" href="favicon.ico">
   <link rel="manifest" href="site.webmanifest">
   <style>
-
 :root{
   --navy:#0E1A2B;
   --amber:#D9822B;
@@ -164,12 +163,26 @@ input:focus, textarea:focus{border-color:rgba(217,130,43,.55); box-shadow:0 0 0 
   .contact-grid{grid-template-columns:1fr}
   .row{grid-template-columns:1fr}
 }
-  </style>
+/* Training page extras */
+.hero{padding:44px 0 18px}
+.hero h1{margin:14px 0 0; font-size: clamp(30px, 3.6vw, 44px);}
+.lead{margin:14px 0 0; max-width: 720px; color: var(--muted);}
+.track{padding:18px}
+.track h3{margin:0; font-size:16px}
+.track p{margin:8px 0 0; color:var(--muted); font-size:14px}
+.track ul{margin:10px 0 0; padding-left:16px; color:var(--muted); font-size:14px}
+.track li{margin:7px 0}
+.pricing{padding:18px}
+.kv{display:flex; justify-content:space-between; gap:14px; padding:10px 0; border-top:1px solid rgba(255,255,255,.08)}
+.kv:first-child{border-top:none; padding-top:0}
+.k{color:var(--muted2); font-size:12px}
+.v{color:var(--text); font-weight:650; font-size:14px; text-align:right}
+</style>
 </head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="#top" aria-label="Impulso home">
+      <a class="brand" href="index.html" aria-label="Impulso home">
         <div class="mark" aria-hidden="true"></div>
         <div>
           <div class="brand-title">Impulso</div>
@@ -178,240 +191,171 @@ input:focus, textarea:focus{border-color:rgba(217,130,43,.55); box-shadow:0 0 0 
       </a>
 
       <nav class="links" aria-label="Primary">
-        <a href="#services">Services</a>
-      <a href="training.html">Training</a>
+        <a href="index.html#services">Services</a>
         <a href="training.html">Training</a>
-        <a href="#approach">Approach</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a class="btn primary" href="#contact">Let’s talk →</a>
+        <a href="index.html#approach">Approach</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="btn primary" href="index.html#contact">Let’s talk →</a>
       </nav>
 
       <button class="btn burger" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
     </div>
 
     <div class="container mobile" id="mobileMenu" hidden>
-      <a href="#services">Services</a>
-        <a href="training.html">Training</a>
-      <a href="#approach">Approach</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a class="btn primary" style="margin:10px 0 16px;" href="#contact">Let’s talk →</a>
+      <a href="index.html#services">Services</a>
+      <a href="training.html">Training</a>
+      <a href="index.html#approach">Approach</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="btn primary" style="margin:10px 0 16px;" href="index.html#contact">Let’s talk →</a>
     </div>
   </header>
 
   <main>
     <section class="hero" id="top">
       <div class="container">
-        <div class="grid hero-grid">
-          <div>
-            <div class="pills">
-              <span class="pill">Modern Workplace</span>
-              <span class="pill">Identity</span>
-              <span class="pill">Security</span>
-              <span class="pill">Training</span>
-            </div>
+        <div class="pills">
+          <span class="pill">Microsoft Intune</span>
+          <span class="pill">Microsoft Entra ID</span>
+          <span class="pill">Security</span>
+          <span class="pill">Hands-on</span>
+        </div>
 
-            <h1>Momentum for modern work.</h1>
-            <p class="lead">
-              Impulso helps organizations move forward with a secure, well-governed modern workplace —
-              without losing control.
-            </p>
+        <h1>Training that sticks.</h1>
+        <p class="lead">
+          Impulso training is designed for engineers and consultants who want practical skills —
+          with strong fundamentals and clear governance. No fluff. Real scenarios. Controlled Momentum.
+        </p>
 
-            <div class="cta">
-              <a class="btn primary" href="#contact">Start with direction →</a>
-              <a class="btn ghost" href="#services">Explore services</a>
-            </div>
-
-            <div class="mini-cards">
-              <div class="card mini">
-                <div class="t"><span class="dot"></span> Clear direction</div>
-                <div class="d">Aligned outcomes, scope and ownership.</div>
-              </div>
-              <div class="card mini">
-                <div class="t"><span class="dot"></span> Sustainable security</div>
-                <div class="d">Controls that enable progress.</div>
-              </div>
-              <div class="card mini">
-                <div class="t"><span class="dot"></span> Pragmatic delivery</div>
-                <div class="d">Built for enterprise realities — not theory.</div>
-              </div>
-            </div>
-          </div>
-
-          <aside class="card panel">
-            <div class="panel-head">
-              <div class="icon" aria-hidden="true">↗</div>
-              <div>
-                <div class="panel-title">Controlled Momentum</div>
-                <div class="panel-sub">Direction before acceleration.</div>
-              </div>
-            </div>
-
-            <div class="steps" aria-label="Four-step method">
-              <div class="step"><div class="step-left"><div class="badge">1</div> Assess</div><div class="arrow">→</div></div>
-              <div class="step"><div class="step-left"><div class="badge">2</div> Design</div><div class="arrow">→</div></div>
-              <div class="step"><div class="step-left"><div class="badge">3</div> Deliver</div><div class="arrow">→</div></div>
-              <div class="step"><div class="step-left"><div class="badge">4</div> Enable</div><div class="arrow">→</div></div>
-            </div>
-
-            <div class="profile">
-              <div class="small">Primary contact</div>
-              <div class="name">Jeroen Burgerhout</div>
-              <div class="pills" style="margin-top:10px">
-                <span class="pill">Microsoft MVP</span>
-                <span class="pill">Microsoft Certified Trainer (MCT)</span>
-              </div>
-            </div>
-          </aside>
+        <div class="cta" style="margin-top:18px">
+          <a class="btn primary" href="index.html#contact">Request a session →</a>
+          <a class="btn ghost" href="#catalog">View training catalog</a>
         </div>
       </div>
     </section>
 
-    <section class="block" id="services">
+    <section class="block" id="catalog">
       <div class="container block-inner">
-        <h2>Services</h2>
-        <p class="subtext">A focused set of services designed for organizations that want to move forward securely and deliberately.</p>
+        <h2>Training catalog</h2>
+        <p class="subtext">Choose a track or combine modules. Sessions can be on-site or remote.</p>
 
         <div class="cards-2">
-          <div class="card service">
-            <h3>Modern Workplace</h3>
-            <p>Architecture, baselines, governance and secure deployment for modern endpoints.</p>
-            <a href="#contact">Discuss this →</a>
+          <div class="card track">
+            <h3>Intune Foundations</h3>
+            <p>Build a reliable baseline for Windows and the modern endpoint lifecycle.</p>
+            <ul>
+              <li>Enrollment strategies (Autopilot / corporate vs BYOD)</li>
+              <li>Configuration baselines & Settings Catalog</li>
+              <li>Update rings, Autopatch concepts & deployment discipline</li>
+              <li>Proactive Remediations (detection/remediation patterns)</li>
+            </ul>
+            <a href="index.html#contact" style="display:inline-flex; margin-top:14px; gap:10px; font-weight:650;">Ask availability →</a>
           </div>
 
-          <div class="card service">
-            <h3>Identity &amp; Security</h3>
-            <p>Entra ID and security foundations that enable progress — without unnecessary friction.</p>
-            <a href="#contact">Discuss this →</a>
+          <div class="card track">
+            <h3>Identity & Conditional Access</h3>
+            <p>Design identity controls that enable the business — without chaos.</p>
+            <ul>
+              <li>Zero Trust fundamentals, access strategy</li>
+              <li>Conditional Access design patterns</li>
+              <li>Named locations, break-glass and operational safety</li>
+              <li>Device compliance signals & risk-based thinking</li>
+            </ul>
+            <a href="index.html#contact" style="display:inline-flex; margin-top:14px; gap:10px; font-weight:650;">Ask availability →</a>
           </div>
 
-          <div class="card service">
-            <h3>Training</h3>
-            <p>Practical, technical training that turns plans into capability — and adoption.</p>
-            <a href="#contact">Discuss this →</a>
+          <div class="card track">
+            <h3>Security Baselines</h3>
+            <p>Pragmatic security that scales across tenants and customers.</p>
+            <ul>
+              <li>Defender & endpoint hardening principles</li>
+              <li>Least privilege & admin workflows</li>
+              <li>Secure configuration and change management</li>
+              <li>Operational guardrails and documentation</li>
+            </ul>
+            <a href="index.html#contact" style="display:inline-flex; margin-top:14px; gap:10px; font-weight:650;">Ask availability →</a>
           </div>
 
-          <div class="card service">
-            <h3>Advisory</h3>
-            <p>Assessments and roadmaps with clear priorities, risks and next steps.</p>
-            <a href="#contact">Discuss this →</a>
+          <div class="card track">
+            <h3>Workshop: Controlled Momentum</h3>
+            <p>A focused workshop to align direction, governance and a realistic roadmap.</p>
+            <ul>
+              <li>Assessment of current state & risks</li>
+              <li>Prioritized roadmap with quick wins</li>
+              <li>Ring strategy, governance model, ownership</li>
+              <li>Deliverable: action plan + baseline outline</li>
+            </ul>
+            <a href="index.html#contact" style="display:inline-flex; margin-top:14px; gap:10px; font-weight:650;">Ask availability →</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="block" id="approach">
+    <section class="block" id="formats">
       <div class="container block-inner">
-        <h2>Approach</h2>
-        <p class="subtext">Progress, without chaos. You get direction, momentum and control — in that order.</p>
+        <h2>Formats</h2>
+        <p class="subtext">Clear outcomes, practical exercises, and take-home material.</p>
 
         <div class="approach">
           <div class="card expect">
-            <h3 style="margin:0; font-size:16px;">What you can expect</h3>
-            <p style="margin:8px 0 0; color:var(--muted); font-size:14px;">Pragmatic, senior, outcome-driven.</p>
+            <h3 style="margin:0; font-size:16px;">Typical setup</h3>
             <ul>
-              <li>Clear deliverables and decisions</li>
-              <li>Evidence-based recommendations</li>
-              <li>Hands-on implementation where needed</li>
+              <li>Remote or on-site</li>
+              <li>Half-day / full-day / 2-day</li>
+              <li>Live demos + hands-on labs</li>
+              <li>Q&A and implementation guidance</li>
             </ul>
           </div>
 
           <div class="bullets">
             <div class="card bullet">
-              <h3>Clarity first</h3>
-              <p>We align outcomes, scope and ownership before anything is built.</p>
+              <h3>Hands-on first</h3>
+              <p>We learn by building. Labs are based on real implementations.</p>
             </div>
             <div class="card bullet">
-              <h3>Security as an enabler</h3>
-              <p>Controls that reduce risk without blocking the business.</p>
+              <h3>Enterprise-ready</h3>
+              <p>Governance, documentation and operational safety are included.</p>
             </div>
             <div class="card bullet">
-              <h3>Delivery that sticks</h3>
-              <p>Governance, documentation and knowledge transfer are part of the work — not an afterthought.</p>
+              <h3>Take-home assets</h3>
+              <p>Templates, checklists and practical examples you can reuse.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="block" id="about">
+    <section class="block" id="pricing">
       <div class="container block-inner">
-        <h2>About</h2>
-        <p class="subtext">Impulso is a boutique consultancy focused on modern work, security, and identity — combining strategy, architecture, implementation, and training.</p>
-
-        <div class="about-grid">
-          <div class="card about-card">
-            <h3 style="margin:0; font-size:16px;">Why Impulso</h3>
-            <p>“Impulso” means momentum — but always with intent. The goal is progress without chaos: measurable outcomes, strong foundations, and a workplace people can actually use.</p>
-            <div class="highlight">
-              <p style="margin:0; color:var(--muted); font-size:14px;">Direction before acceleration. Governance before scale. Security that enables progress.</p>
-            </div>
-          </div>
-
-          <div class="card about-card">
-            <h3 style="margin:0; font-size:16px;">Who you work with</h3>
-            <p>Founded by <strong>Jeroen Burgerhout</strong> (Microsoft MVP &amp; MCT). You get senior, pragmatic guidance and delivery — built for enterprise realities.</p>
-            <p style="margin-top:12px; color:var(--muted2); font-size:13px;">Prefer a short intro? Scroll down and send a note — I’ll respond personally.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="block" id="contact">
-      <div class="container block-inner">
-        <h2>Contact</h2>
-        <p class="subtext">Let’s talk. A short message is enough — we’ll start with direction and a clear next step.</p>
+        <h2>Booking & pricing</h2>
+        <p class="subtext">Pricing depends on format, number of participants and scope.</p>
 
         <div class="contact-grid">
-          <div class="card form">
-            <form id="contactForm">
-              <div class="row">
-                <div>
-                  <label for="name">Name</label>
-                  <input id="name" name="name" autocomplete="name" required />
-                </div>
-                <div>
-                  <label for="company">Company</label>
-                  <input id="company" name="company" autocomplete="organization" />
-                </div>
-              </div>
-
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required />
-
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required></textarea>
-
-              <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
-                <button type="submit" class="btn primary">Send email →</button>
-                <a class="btn ghost" href="mailto:jeroen@withimpulso.com">Or email directly</a>
-              </div>
-
-              <div class="note">Tip: later you can replace “mailto” with a hosted form service (Formspree / Netlify / etc.).</div>
-            </form>
+          <div class="card pricing">
+            <div class="kv"><div class="k">Audience</div><div class="v">Engineers • Consultants • IT teams</div></div>
+            <div class="kv"><div class="k">Languages</div><div class="v">Dutch • English</div></div>
+            <div class="kv"><div class="k">Location</div><div class="v">Remote • On-site</div></div>
+            <div class="kv"><div class="k">Next step</div><div class="v"><a href="index.html#contact">Request a quote</a></div></div>
+            <div class="note" style="margin-top:14px;">
+              Want a custom track? Share your goals and current environment — I’ll propose a session plan.
+            </div>
           </div>
 
           <aside class="card contact-card">
-            <div><div class="k">Primary</div><div class="v">Jeroen Burgerhout</div></div>
-
+            <div><div class="k">Contact</div><div class="v">Jeroen Burgerhout</div></div>
             <div class="contact-item">
               <div><div class="k">Email</div><div class="v"><a href="mailto:jeroen@withimpulso.com">jeroen@withimpulso.com</a></div></div>
             </div>
-
             <div class="contact-item">
               <div><div class="k">Website</div><div class="v"><a href="https://withimpulso.com" target="_blank" rel="noreferrer">withimpulso.com</a></div></div>
             </div>
-
-            <div class="contact-item">
-              <div><div class="k">Expertise</div><div class="v">Modern Workplace • Identity • Security</div></div>
-            </div>
-
             <div class="contact-item">
               <div><div class="k">Credentials</div><div class="v">Microsoft MVP • MCT</div></div>
             </div>
-
-            <div style="margin-top:14px;"><a class="btn ghost" href="#services">View services</a></div>
+            <div style="margin-top:14px;">
+              <a class="btn primary" href="index.html#contact">Request training →</a>
+            </div>
           </aside>
         </div>
       </div>
@@ -435,24 +379,6 @@ input:focus, textarea:focus{border-color:rgba(217,130,43,.55); box-shadow:0 0 0 
     mobile?.querySelectorAll('a')?.forEach(a => a.addEventListener('click', () => {
       mobile.setAttribute('hidden',''); btn.setAttribute('aria-expanded','false');
     }));
-
-    const form = document.getElementById('contactForm');
-    form?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const company = document.getElementById('company').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      const subject = encodeURIComponent(`Contact via withimpulso.com — ${name}${company ? ` (${company})` : ''}`);
-      const body = encodeURIComponent(
-        `Name: ${name}\n` +
-        `Company: ${company || '-'}\n` +
-        `Email: ${email}\n\n` +
-        `${message}\n`
-      );
-      window.location.href = `mailto:jeroen@withimpulso.com?subject=${subject}&body=${body}`;
-    });
-
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
