@@ -102,7 +102,7 @@
               <div class="small">Primary contact</div>
               <div class="name">Jeroen Burgerhout</div>
               <div class="pills" style="margin-top:10px">
-                <span class="pill">Microsoft Intune and Identity & Access MVP</span>
+                <span class="pill">Microsoft MVP</span>
                 <span class="pill">Microsoft Certified Trainer (MCT)</span>
               </div>
             </div>
@@ -194,7 +194,7 @@
 
           <div class="card about-card">
             <h3 style="margin:0; font-size:16px;">Who you work with</h3>
-            <p>Founded by <strong>Jeroen Burgerhout</strong> (Microsoft MVP &amp; MCT). You get senior, pragmatic guidance and delivery — built for enterprise realities.</p>
+            <p>Founded by <strong>Jeroen Burgerhout</strong> (Microsoft Intune and Identity & Access MVP &amp; MCT). You get senior, pragmatic guidance and delivery — built for enterprise realities.</p>
             <p style="margin-top:12px; color:var(--muted2); font-size:13px;">Prefer a short intro? Scroll down and send a note — I’ll respond personally.</p>
           </div>
         </div>
@@ -268,35 +268,44 @@
   </main>
 
   <script>
+    // Mobile menu toggle (robust)
     const btn = document.getElementById('menuBtn');
     const mobile = document.getElementById('mobileMenu');
+
+    function closeMenu() {
+      if (!mobile) return;
+      mobile.setAttribute('hidden','');
+      btn?.setAttribute('aria-expanded','false');
+    }
+    function openMenu() {
+      if (!mobile) return;
+      mobile.removeAttribute('hidden');
+      btn?.setAttribute('aria-expanded','true');
+    }
+    function isMenuOpen() {
+      return mobile && !mobile.hasAttribute('hidden');
+    }
+
     btn?.addEventListener('click', () => {
-      const isOpen = mobile.hasAttribute('hidden') === false;
-      if (isOpen) { mobile.setAttribute('hidden',''); btn.setAttribute('aria-expanded','false'); }
-      else { mobile.removeAttribute('hidden'); btn.setAttribute('aria-expanded','true'); }
-    });
-    mobile?.querySelectorAll('a')?.forEach(a => a.addEventListener('click', () => {
-      mobile.setAttribute('hidden',''); btn.setAttribute('aria-expanded','false');
-    }));
-
-    const form = document.getElementById('contactForm');
-    form?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const company = document.getElementById('company').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      const subject = encodeURIComponent(`Contact via withimpulso.com — ${name}${company ? ` (${company})` : ''}`);
-      const body = encodeURIComponent(
-        `Name: ${name}\n` +
-        `Company: ${company || '-'}\n` +
-        `Email: ${email}\n\n` +
-        `${message}\n`
-      );
-      window.location.href = `mailto:hello@withimpulso.com?subject=${subject}&body=${body}`;
+      if (isMenuOpen()) closeMenu();
+      else openMenu();
     });
 
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Close when clicking any link inside the mobile menu (even when navigating to another page)
+    mobile?.addEventListener('click', (e) => {
+      const a = e.target?.closest?.('a');
+      if (a) {
+        closeMenu();
+        setTimeout(closeMenu, 50);
+      }
+    }, true);
+
+    // Close on hash changes
+    window.addEventListener('hashchange', closeMenu);
+
+    // Footer year
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
   </script>
 
   <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie notice">

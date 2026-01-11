@@ -124,27 +124,44 @@ Registered address: <strong>Emmalaan 2, 2421 CP, Nieuwkoop, The Netherlands</str
 
 
   <script>
+    // Mobile menu toggle (robust)
     const btn = document.getElementById('menuBtn');
     const mobile = document.getElementById('mobileMenu');
-    btn?.addEventListener('click', () => {
-      const isOpen = mobile.hasAttribute('hidden') === false;
-      if (isOpen) { mobile.setAttribute('hidden',''); btn.setAttribute('aria-expanded','false'); }
-      else { mobile.removeAttribute('hidden'); btn.setAttribute('aria-expanded','true'); }
-    });
-    mobile?.querySelectorAll('a')?.forEach(a => a.addEventListener('click', () => {
-      mobile.setAttribute('hidden',''); btn.setAttribute('aria-expanded','false');
-    }));
-    document.getElementById('year').textContent = new Date().getFullYear();
 
-    const KEY = "impulso_cookie_notice_ok";
-    const banner = document.getElementById("cookieBanner");
-    const okBtn = document.getElementById("cookieOk");
-    function hideBanner(){ banner?.classList.add("hide"); }
-    try { if (localStorage.getItem(KEY) === "1") hideBanner(); } catch(e){}
-    okBtn?.addEventListener("click", () => {
-      try { localStorage.setItem(KEY, "1"); } catch(e) {}
-      hideBanner();
+    function closeMenu() {
+      if (!mobile) return;
+      mobile.setAttribute('hidden','');
+      btn?.setAttribute('aria-expanded','false');
+    }
+    function openMenu() {
+      if (!mobile) return;
+      mobile.removeAttribute('hidden');
+      btn?.setAttribute('aria-expanded','true');
+    }
+    function isMenuOpen() {
+      return mobile && !mobile.hasAttribute('hidden');
+    }
+
+    btn?.addEventListener('click', () => {
+      if (isMenuOpen()) closeMenu();
+      else openMenu();
     });
+
+    // Close when clicking any link inside the mobile menu (even when navigating to another page)
+    mobile?.addEventListener('click', (e) => {
+      const a = e.target?.closest?.('a');
+      if (a) {
+        closeMenu();
+        setTimeout(closeMenu, 50);
+      }
+    }, true);
+
+    // Close on hash changes
+    window.addEventListener('hashchange', closeMenu);
+
+    // Footer year
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
