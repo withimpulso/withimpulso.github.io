@@ -94,6 +94,52 @@ const TrainingsPage = () => {
         </div>
       </section>
 
+      {/* Formats */}
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">
+              Formats
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
+              Typical setup
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
+              Clear outcomes, practical exercises, and take-home material.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="grid sm:grid-cols-2 md:grid-cols-4 gap-6"
+          >
+            {[
+              { icon: "🏠", label: "Remote or on-site" },
+              { icon: "📅", label: "Half-day / full-day / 2-day" },
+              { icon: "🧪", label: "Live demos + hands-on labs" },
+              { icon: "💬", label: "Q&A and implementation guidance" },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="bg-card border border-border rounded-lg p-6 text-center"
+              >
+                <span className="text-3xl mb-3 block">{item.icon}</span>
+                <p className="text-sm text-foreground font-medium">{item.label}</p>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Trainings grid */}
       <section className="py-20 md:py-28 bg-surface">
         <div className="container">
@@ -149,52 +195,6 @@ const TrainingsPage = () => {
               </motion.article>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Formats */}
-      <section className="py-20 md:py-28 bg-background">
-        <div className="container max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">
-              Formats
-            </p>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
-              Typical setup
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-              Clear outcomes, practical exercises, and take-home material.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="grid sm:grid-cols-2 md:grid-cols-4 gap-6"
-          >
-            {[
-              { icon: "🏠", label: "Remote or on-site" },
-              { icon: "📅", label: "Half-day / full-day / 2-day" },
-              { icon: "🧪", label: "Live demos + hands-on labs" },
-              { icon: "💬", label: "Q&A and implementation guidance" },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="bg-card border border-border rounded-lg p-6 text-center"
-              >
-                <span className="text-3xl mb-3 block">{item.icon}</span>
-                <p className="text-sm text-foreground font-medium">{item.label}</p>
-              </div>
-            ))}
-          </motion.div>
         </div>
       </section>
 
