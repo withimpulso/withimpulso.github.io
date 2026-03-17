@@ -2,9 +2,10 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { label: "Services", href: "#services" },
-  { label: "Why Impulso", href: "#why" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/#services" },
+  { label: "Why Impulso", href: "/#why" },
+  { label: "Trainings", href: "/trainings" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
