@@ -15,8 +15,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-navy-light/30">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <a href="#" className="font-serif text-2xl text-primary-foreground tracking-tight">
-          Impulso
+        <a href="/" className="flex items-center">
+          <img src={logo} alt="Impulso" className="h-8 md:h-10" />
         </a>
 
         {/* Desktop */}
