@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-4">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/impulsonl"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary-foreground/50 hover:text-accent transition-colors"
