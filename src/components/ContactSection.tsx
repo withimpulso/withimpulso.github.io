@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ContactSection = () => {
   return (
@@ -22,13 +23,13 @@ const ContactSection = () => {
             Whether you're starting a transformation or need expert hands on a specific challenge — 
             let's have a conversation about what's next.
           </p>
-          <a
-            href="mailto:hello@impulso.nl"
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-3 px-8 py-4 bg-accent text-accent-foreground font-semibold rounded-md hover:bg-amber-light transition-colors group"
           >
-            hello@impulso.nl
+            Get in Touch
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
