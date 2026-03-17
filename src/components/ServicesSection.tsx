@@ -43,7 +43,7 @@ const ServicesSection = () => {
             What We Do
           </p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground">
-            Three Pillars of Expertise
+            Four Pillars of Expertise
           </h2>
         </motion.div>
 
