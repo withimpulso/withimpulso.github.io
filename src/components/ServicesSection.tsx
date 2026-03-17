@@ -47,7 +47,7 @@ const ServicesSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
