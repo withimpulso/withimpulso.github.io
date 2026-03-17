@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Monitor, ShieldCheck, Fingerprint } from "lucide-react";
+import { Monitor, ShieldCheck, Fingerprint, GraduationCap } from "lucide-react";
 
 const services = [
   {
@@ -19,6 +19,12 @@ const services = [
     title: "Security",
     description:
       "Protect what matters most. We implement Microsoft Defender, Sentinel, and Purview to give you visibility, detection, and response across your estate.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Trainings",
+    description:
+      "Upskill your team with hands-on, expert-led trainings. From Microsoft 365 fundamentals to advanced security operations — practical knowledge that sticks.",
   },
 ];
 
