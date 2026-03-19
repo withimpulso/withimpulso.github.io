@@ -12,8 +12,8 @@ const businessDetails = [
   {
     icon: MapPin,
     label: "Address",
-    value: "Keizersgracht 520, 1017 EK Amsterdam",
-    href: "https://maps.google.com/?q=Keizersgracht+520+1017+EK+Amsterdam",
+    value: "Emmalaan 2, 2421 CP Nieuwkoop",
+    href: "https://maps.google.com/?q=Emmalaan+2+2421+CP+Nieuwkoop",
   },
   {
     icon: Mail,
