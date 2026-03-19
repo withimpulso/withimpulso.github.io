@@ -22,12 +22,6 @@ const businessDetails = [
     href: "mailto:hello@impulso.nl",
   },
   {
-    icon: Phone,
-    label: "Phone",
-    value: "+31 20 123 4567",
-    href: "tel:+31201234567",
-  },
-  {
     icon: Clock,
     label: "Business Hours",
     value: "Mon – Fri, 09:00 – 17:30",
