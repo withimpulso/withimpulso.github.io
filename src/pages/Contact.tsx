@@ -12,7 +12,7 @@ const businessDetails = [
   {
     icon: MapPin,
     label: "Address",
-    value: "Emmalaan 2, 2421 CP Nieuwkoop",
+    value: "Emmalaan 2, 2421 CP Nieuwkoop, The Netherlands",
     href: "https://maps.google.com/?q=Emmalaan+2+2421+CP+Nieuwkoop",
   },
   {
@@ -254,9 +254,9 @@ const ContactPage = () => {
               <div className="rounded-lg overflow-hidden border border-border">
                 <iframe
                   title="Office location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.117!2d4.8875!3d52.3645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609e943cc08d1%3A0x5b4a37f4f2c0a8a0!2sKeizersgracht%20520%2C%201017%20EK%20Amsterdam!5e0!3m2!1sen!2snl!4v1710000000000"
-                  width="100%"
-                  height="280"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2447.742736152942!2d4.78126751245123!3d52.1571881629106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5d8e0bc11345b%3A0xead1ed204385b571!2sEmmalaan%202%2C%202421%20CP%20Nieuwkoop%2C%20Nederland!5e0!3m2!1snl!2sus!4v1774473127129!5m2!1snl!2sus"
+                  width="600"
+                  height="450"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
