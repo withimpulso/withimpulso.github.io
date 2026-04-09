@@ -20,11 +20,24 @@
   <meta name="twitter:title" content="Impulso — Modern Workplace, Identity &amp; Security Consultancy">
   <meta property="og:description" content="Impulso is a boutique consultancy helping organizations move forward with clarity, control, and confidence across Modern Workplace, Identity, and Security.">
   <meta name="twitter:description" content="Impulso is a boutique consultancy helping organizations move forward with clarity, control, and confidence across Modern Workplace, Identity, and Security.">
-  <script type="module" crossorigin src="/assets/index-k42A2CK2.js"></script>
+  <script type="module" crossorigin src="/assets/index-D46-u8ZD.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-Cd23bZpS.css">
 </head>
 
   <body>
+    <script>
+      // Restore routes redirected by public/404.html on static hosting.
+      (function (location) {
+        if (location.search[1] === "/") {
+          const decoded = location.search
+            .slice(1)
+            .split("&")
+            .map((s) => s.replace(/~and~/g, "&"))
+            .join("?");
+          window.history.replaceState(null, "", location.pathname.slice(0, -1) + decoded + location.hash);
+        }
+      })(window.location);
+    </script>
     <div id="root"></div>
   </body>
 </html>
