@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo-impulso.svg";
 
@@ -11,13 +12,36 @@ const navItems = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+      e.preventDefault();
+      setOpen(false);
+
+      if (href.startsWith("/#")) {
+        const hash = href.slice(1); // e.g. "#services"
+        if (location.pathname === "/") {
+          document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" });
+        } else {
+          navigate("/" + hash);
+        }
+      } else if (href.startsWith("#")) {
+        document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        navigate(href);
+      }
+    },
+    [navigate, location.pathname]
+  );
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-navy-light/30">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <a href="/" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img src={logo} alt="Impulso" className="h-8 md:h-10" />
-        </a>
+        </Link>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
@@ -25,13 +49,15 @@ const Navbar = () => {
             <a
               key={item.href}
               href={item.href}
+              onClick={(e) => handleNavClick(e, item.href)}
               className="text-sm font-medium text-primary-foreground/70 hover:text-accent transition-colors"
             >
               {item.label}
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
+            onClick={(e) => handleNavClick(e, "/#contact")}
             className="px-5 py-2.5 text-sm font-semibold bg-accent text-accent-foreground rounded-md hover:bg-amber-light transition-colors"
           >
             Get in Touch
@@ -54,7 +80,7 @@ const Navbar = () => {
             <a
               key={item.href}
               href={item.href}
-              onClick={() => setOpen(false)}
+              onClick={(e) => handleNavClick(e, item.href)}
               className="block px-6 py-3 text-primary-foreground/70 hover:text-accent transition-colors"
             >
               {item.label}
@@ -62,8 +88,8 @@ const Navbar = () => {
           ))}
           <div className="px-6 pt-2">
             <a
-              href="#contact"
-              onClick={() => setOpen(false)}
+              href="/#contact"
+              onClick={(e) => handleNavClick(e, "/#contact")}
               className="inline-block px-5 py-2.5 text-sm font-semibold bg-accent text-accent-foreground rounded-md"
             >
               Get in Touch
