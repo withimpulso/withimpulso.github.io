@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { Monitor, ShieldCheck, Fingerprint, GraduationCap } from "lucide-react";
+import {
+  Monitor,
+  ShieldCheck,
+  Fingerprint,
+  GraduationCap,
+  Building2,
+  ClipboardCheck,
+} from "lucide-react";
 
 const services = [
   {
@@ -19,6 +26,18 @@ const services = [
     title: "Security",
     description:
       "Protect what matters most. We implement Microsoft Defender, Sentinel, and Purview to give you visibility, detection, and response across your estate.",
+  },
+  {
+    icon: Building2,
+    title: "Tenant Review",
+    description:
+      "Get a clear view of your Microsoft 365 tenant. We review configuration, governance, security, and operational readiness to identify risks and practical improvements.",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Licensing Review",
+    description:
+      "Make every license count. We assess your Microsoft licensing, usage, and requirements to uncover gaps, reduce waste, and align subscriptions with your business.",
   },
   {
     icon: GraduationCap,
@@ -43,7 +62,7 @@ const ServicesSection = () => {
             What We Do
           </p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground">
-            Four Pillars of Expertise
+            Six Pillars of Expertise
           </h2>
         </motion.div>
 
