@@ -10,6 +10,18 @@ import {
 
 const services = [
   {
+    icon: Building2,
+    title: "Tenant Review",
+    description:
+      "Get a clear view of your Microsoft 365 tenant. We cross-check your configuration, governance, security, and operational readiness against our best-practice benchmarks to identify risks and practical improvements.",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Licensing Review",
+    description:
+      "We review your Microsoft licensing against your actual usage and business needs. The outcome can be better-aligned subscriptions and opportunities to reduce licensing costs.",
+  },
+  {
     icon: Monitor,
     title: "Modern Workplace",
     description:
@@ -26,18 +38,6 @@ const services = [
     title: "Security",
     description:
       "Protect what matters most. We implement Microsoft Defender, Sentinel, and Purview to give you visibility, detection, and response across your estate.",
-  },
-  {
-    icon: Building2,
-    title: "Tenant Review",
-    description:
-      "Get a clear view of your Microsoft 365 tenant. We review configuration, governance, security, and operational readiness to identify risks and practical improvements.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Licensing Review",
-    description:
-      "Make every license count. We assess your Microsoft licensing, usage, and requirements to uncover gaps, reduce waste, and align subscriptions with your business.",
   },
   {
     icon: GraduationCap,
