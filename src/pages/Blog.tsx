@@ -51,7 +51,7 @@ const Blog = () => {
         </section>
 
         <article className="container max-w-3xl mx-auto py-16 pb-20 md:py-20 md:pb-28">
-          <div className="prose prose-lg prose-slate max-w-none prose-headings:font-serif prose-headings:text-foreground prose-p:text-muted-foreground prose-p:leading-relaxed prose-strong:text-foreground">
+          <div className="prose prose-lg prose-slate max-w-none prose-headings:font-serif prose-headings:text-foreground prose-headings:mt-12 prose-headings:mb-5 prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-7 prose-p:mt-0 prose-strong:text-foreground prose-blockquote:my-10 prose-li:mb-3">
             <p className="lead">
               {language === "ca"
                 ? "La majoria d'organitzacions saben qui són els seus empleats. Moltes menys poden respondre amb confiança una pregunta més important: qui encara té accés a què, i per què?"
@@ -150,7 +150,7 @@ const Blog = () => {
                       : "A good Microsoft 365 tenant review should not end as a list of findings. Your team should know what to do first, what can wait, and why."}
               </p>
 
-              <div className="prose prose-lg prose-slate max-w-none prose-headings:font-serif prose-headings:text-foreground prose-p:text-muted-foreground prose-p:leading-relaxed prose-strong:text-foreground">
+              <div className="prose prose-lg prose-slate max-w-none prose-headings:font-serif prose-headings:text-foreground prose-headings:mt-12 prose-headings:mb-5 prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-7 prose-p:mt-0 prose-strong:text-foreground">
                 <h3>{language === "ca" ? "Comença pel risc" : language === "nl" ? "Begin bij het risico" : language === "es" ? "Empieza por el riesgo" : "Start with the risk"}</h3>
                 <p>
                   {language === "ca"
