@@ -50,20 +50,7 @@ const Blog = () => {
           </div>
         </section>
 
-        <section className="py-14 md:py-20 bg-surface">
-          <div className="container max-w-5xl mx-auto">
-            <motion.img
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              src="/hero-bg.jpg"
-              alt="A consultant reviewing a cloud security architecture"
-              className="w-full aspect-[2/1] object-cover rounded-lg"
-            />
-          </div>
-        </section>
-
-        <article className="container max-w-3xl mx-auto py-4 pb-20 md:pb-28">
+        <article className="container max-w-3xl mx-auto py-16 pb-20 md:py-20 md:pb-28">
           <div className="prose prose-lg prose-slate max-w-none prose-headings:font-serif prose-headings:text-foreground prose-p:text-muted-foreground prose-p:leading-relaxed prose-strong:text-foreground">
             <p className="lead">
               {language === "ca"
@@ -146,52 +133,52 @@ const Blog = () => {
               </div>
               <h2 className="font-serif text-3xl md:text-5xl text-foreground leading-tight mb-5">
                 {language === "ca"
-                  ? "De la revisió del tenant a un full de ruta que funciona"
+                  ? "Com convertir una revisió del tenant en un full de ruta pràctic"
                   : language === "nl"
-                    ? "Van tenant-review naar een roadmap die werkt"
+                    ? "Van tenant review naar een praktische roadmap"
                     : language === "es"
-                      ? "De la revisión del tenant a una hoja de ruta que funciona"
-                      : "From tenant review to a roadmap that works"}
+                      ? "Cómo convertir una revisión del tenant en una hoja de ruta práctica"
+                      : "How to turn a tenant review into a practical roadmap"}
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                 {language === "ca"
-                  ? "Una bona revisió de Microsoft 365 no hauria d'acabar en una llista de troballes. Ha de donar al teu equip una seqüència clara de decisions, prioritats i pròxims passos."
+                  ? "Una bona revisió de Microsoft 365 no hauria d'acabar en una llista de troballes. Ha d'ajudar el teu equip a decidir què cal fer, en quin ordre i per què."
                   : language === "nl"
-                    ? "Een goede Microsoft 365-tenant-review hoort niet te eindigen als een lijst met bevindingen. Je team heeft een duidelijke volgorde van beslissingen, prioriteiten en vervolgstappen nodig."
+                    ? "Een goede review van je Microsoft 365 tenant hoort niet te eindigen als een lijst met bevindingen. Je team moet weten wat het eerst moet gebeuren, wat kan wachten en waarom."
                     : language === "es"
-                      ? "Una buena revisión del tenant de Microsoft 365 no debería terminar en una lista de hallazgos. Debe ofrecer a tu equipo una secuencia clara de decisiones, prioridades y próximos pasos."
-                      : "A good Microsoft 365 tenant review should not end as a list of findings. It should give your team a clear sequence of decisions, priorities, and next steps."}
+                      ? "Una buena revisión del tenant de Microsoft 365 no debería terminar en una lista de hallazgos. Tu equipo debe saber qué hacer primero, qué puede esperar y por qué."
+                      : "A good Microsoft 365 tenant review should not end as a list of findings. Your team should know what to do first, what can wait, and why."}
               </p>
 
               <div className="prose prose-lg prose-slate max-w-none prose-headings:font-serif prose-headings:text-foreground prose-p:text-muted-foreground prose-p:leading-relaxed prose-strong:text-foreground">
-                <h3>{language === "ca" ? "Comença pel risc, no per l'eina" : language === "nl" ? "Begin bij het risico, niet bij de tool" : language === "es" ? "Empieza por el riesgo, no por la herramienta" : "Start with risk, not the tool"}</h3>
+                <h3>{language === "ca" ? "Comença pel risc" : language === "nl" ? "Begin bij het risico" : language === "es" ? "Empieza por el riesgo" : "Start with the risk"}</h3>
                 <p>
                   {language === "ca"
-                    ? "La primera pregunta no és quina configuració pots canviar, sinó quin risc vols reduir. Quan connectes cada recomanació amb l'impacte que té en el negoci, les decisions es tornen més fàcils d'explicar i d'executar."
+                    ? "La primera pregunta no és quina configuració pots canviar, sinó quin risc vols reduir. Quan cada recomanació està relacionada amb l'impacte en el negoci, és més fàcil explicar-la i posar-la en pràctica."
                     : language === "nl"
-                      ? "De eerste vraag is niet welke instelling je kunt wijzigen, maar welk risico je wilt verkleinen. Als elke aanbeveling gekoppeld is aan bedrijfsimpact, worden beslissingen eenvoudiger uit te leggen en uit te voeren."
+                      ? "De eerste vraag is niet welke instelling je kunt wijzigen, maar welk risico je wilt verkleinen. Als je de aanbeveling koppelt aan de gevolgen voor het bedrijf, wordt de beslissing eenvoudiger."
                       : language === "es"
-                        ? "La primera pregunta no es qué configuración puedes cambiar, sino qué riesgo quieres reducir. Cuando cada recomendación está vinculada al impacto en el negocio, las decisiones son más fáciles de explicar y ejecutar."
-                        : "The first question is not which setting you can change, but which risk you want to reduce. When every recommendation is connected to business impact, decisions become easier to explain and execute."}
+                        ? "La primera pregunta no es qué configuración puedes cambiar, sino qué riesgo quieres reducir. Cuando relacionas cada recomendación con el impacto en el negocio, la decisión resulta más fácil de explicar."
+                        : "The first question is not which setting you can change. It is which risk you want to reduce. When a recommendation is tied to business impact, the decision is easier to explain."}
                 </p>
-                <h3>{language === "ca" ? "Converteix les troballes en decisions" : language === "nl" ? "Maak van bevindingen beslissingen" : language === "es" ? "Convierte los hallazgos en decisiones" : "Turn findings into decisions"}</h3>
+                <h3>{language === "ca" ? "Converteix les troballes en decisions" : language === "nl" ? "Maak van bevindingen acties" : language === "es" ? "Convierte los hallazgos en acciones" : "Turn findings into action"}</h3>
                 <p>
                   {language === "ca"
-                    ? "Agrupa les troballes en tres nivells: accions immediates, millores planificades i decisions que requereixen més context. Això evita que les recomanacions urgents quedin enterrades entre canvis de configuració de menor impacte."
+                    ? "Agrupa les troballes en accions immediates, millores planificades i decisions que necessiten més context. Això evita que les recomanacions urgents quedin amagades entre canvis de menor impacte."
                     : language === "nl"
-                      ? "Verdeel bevindingen in drie niveaus: directe acties, geplande verbeteringen en beslissingen die meer context nodig hebben. Zo raken urgente aanbevelingen niet ondergesneeuwd door configuratiewijzigingen met minder impact."
+                      ? "Verdeel de bevindingen in directe acties, geplande verbeteringen en beslissingen die meer context nodig hebben. Zo blijven urgente aanbevelingen zichtbaar."
                       : language === "es"
-                        ? "Agrupa los hallazgos en tres niveles: acciones inmediatas, mejoras planificadas y decisiones que necesitan más contexto. Así, las recomendaciones urgentes no quedan enterradas entre cambios de configuración de menor impacto."
-                        : "Group findings into three levels: immediate actions, planned improvements, and decisions that need more context. This keeps urgent recommendations from getting buried among lower-impact configuration changes."}
+                        ? "Separa los hallazgos en acciones inmediatas, mejoras planificadas y decisiones que necesitan más contexto. Así, las recomendaciones urgentes siguen siendo visibles."
+                        : "Put the findings into three groups: actions to take now, improvements to plan, and decisions that need more context. This keeps urgent work visible."}
                 </p>
                 <p>
                   {language === "ca"
-                    ? "El millor full de ruta és prou concret per començar demà i prou flexible per adaptar-se a la realitat del teu equip. Defineix un responsable, una data i una manera de saber quan l'acció està acabada."
+                    ? "El millor full de ruta és prou concret per començar demà i prou flexible per adaptar-se al teu equip. Defineix un responsable, una data i una manera de saber quan l'acció està acabada."
                     : language === "nl"
-                      ? "De beste roadmap is concreet genoeg om morgen te starten en flexibel genoeg om aan te sluiten bij de realiteit van je team. Bepaal een eigenaar, een datum en hoe je weet dat de actie is afgerond."
+                      ? "De beste roadmap is concreet genoeg om morgen te starten en flexibel genoeg voor je team. Bepaal een eigenaar, een datum en wanneer de actie klaar is."
                       : language === "es"
-                        ? "La mejor hoja de ruta es lo bastante concreta para empezar mañana y lo bastante flexible para adaptarse a la realidad de tu equipo. Define un responsable, una fecha y cómo saber cuándo se ha completado la acción."
-                        : "The best roadmap is concrete enough to start tomorrow and flexible enough to reflect your team's reality. Define an owner, a date, and a way to know when the action is complete."}
+                        ? "La mejor hoja de ruta debe permitir empezar mañana y ser flexible para tu equipo. Define un responsable, una fecha y cómo saber cuándo termina la acción."
+                        : "The best roadmap should be practical enough to start tomorrow and flexible enough for your team. Give each action an owner, a date, and a clear finish line."}
                 </p>
               </div>
 

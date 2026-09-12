@@ -11,7 +11,7 @@ const trainings = [
     duration: "2 days",
     format: "In-person / Virtual",
     description:
-      "A hands-on deep dive into the Microsoft 365 ecosystem — covering Exchange Online, SharePoint, Teams administration, and Intune device management.",
+      "A hands-on deep dive into the Microsoft 365 ecosystem, covering Exchange Online, SharePoint, Teams administration, and Intune device management.",
     topics: ["Exchange Online", "SharePoint Admin", "Teams Governance", "Intune Basics"],
   },
   {

@@ -81,7 +81,7 @@ const ContactPage = () => {
     : {
         eyebrow: "Contact",
         title: "Let's start a conversation",
-        intro: "Whether you're starting a transformation or need expert hands on a specific challenge — we're here to help.",
+        intro: "Whether you're starting a transformation or need expert hands on a specific challenge, we're here to help.",
         formTitle: "Send us a message",
         formIntro: "Fill in the form and we'll get back to you within one business day.",
         name: "Name *",
@@ -229,7 +229,7 @@ const ContactPage = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
-            {/* Contact form — 3 cols */}
+            {/* Contact form, 3 cols */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -354,7 +354,7 @@ const ContactPage = () => {
               </form>
             </motion.div>
 
-            {/* Business details — 2 cols */}
+            {/* Business details, 2 cols */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
