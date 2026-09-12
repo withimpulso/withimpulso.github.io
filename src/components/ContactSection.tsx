@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { Mail, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/lib/i18n";
 
 const ContactSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="contact" className="py-24 md:py-32 bg-surface">
       <div className="container">
@@ -17,17 +20,16 @@ const ContactSection = () => {
             <Mail className="w-6 h-6 text-accent" />
           </div>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
-            Ready to move forward?
+            {t("contact.ready")}
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-10 max-w-lg mx-auto">
-            Whether you're starting a transformation or need expert hands on a specific challenge — 
-            let's have a conversation about what's next.
+            {t("contact.description")}
           </p>
           <Link
             to="/contact"
             className="inline-flex items-center gap-3 px-8 py-4 bg-accent text-accent-foreground font-semibold rounded-md hover:bg-amber-light transition-colors group"
           >
-            Get in Touch
+            {t("contact.button")}
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>

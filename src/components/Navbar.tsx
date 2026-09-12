@@ -2,15 +2,19 @@ import { useState, useCallback } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo-impulso.svg";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/lib/i18n";
 
 const navItems = [
-  { label: "Services", href: "/#services" },
-  { label: "Why Impulso", href: "/#why" },
-  { label: "Trainings", href: "/trainings" },
-  { label: "Contact", href: "/#contact" },
+  { key: "nav.services", href: "/#services" },
+  { key: "nav.why", href: "/#why" },
+  { key: "nav.trainings", href: "/trainings" },
+  { key: "nav.blog", href: "/blog" },
+  { key: "nav.contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
+  const { t } = useLanguage();
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -53,7 +57,7 @@ const Navbar = () => {
               onClick={(e) => handleNavClick(e, item.href)}
               className="text-sm font-medium text-primary-foreground/70 hover:text-accent transition-colors"
             >
-              {item.label}
+              {t(item.key)}
             </a>
           ))}
           <a
@@ -61,8 +65,9 @@ const Navbar = () => {
             onClick={(e) => handleNavClick(e, "/contact")}
             className="px-5 py-2.5 text-sm font-semibold bg-accent text-accent-foreground rounded-md hover:bg-amber-light transition-colors"
           >
-            Get in Touch
+            {t("nav.getInTouch")}
           </a>
+          <LanguageSwitcher />
         </div>
 
         {/* Mobile toggle */}
@@ -84,7 +89,7 @@ const Navbar = () => {
               onClick={(e) => handleNavClick(e, item.href)}
               className="block px-6 py-3 text-primary-foreground/70 hover:text-accent transition-colors"
             >
-              {item.label}
+              {t(item.key)}
             </a>
           ))}
           <div className="px-6 pt-2">
@@ -93,8 +98,11 @@ const Navbar = () => {
               onClick={(e) => handleNavClick(e, "/contact")}
               className="inline-block px-5 py-2.5 text-sm font-semibold bg-accent text-accent-foreground rounded-md"
             >
-              Get in Touch
+              {t("nav.getInTouch")}
             </a>
+          </div>
+          <div className="px-6 pt-5">
+            <LanguageSwitcher />
           </div>
         </div>
       )}

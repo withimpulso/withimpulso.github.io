@@ -1,30 +1,33 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
 const reasons = [
   {
     number: "01",
-    title: "Boutique, not generic",
-    description: "You work directly with senior consultants — no juniors learning on your dime.",
+    titleKey: "why.boutique.title",
+    descriptionKey: "why.boutique.description",
   },
   {
     number: "02",
-    title: "Microsoft-native",
-    description: "Deep expertise across the Microsoft ecosystem. No tool sprawl, no vendor lock-in confusion.",
+    titleKey: "why.microsoft.title",
+    descriptionKey: "why.microsoft.description",
   },
   {
     number: "03",
-    title: "Outcome-driven",
-    description: "We don't sell hours. We deliver roadmaps, implementations, and measurable progress.",
+    titleKey: "why.outcome.title",
+    descriptionKey: "why.outcome.description",
   },
   {
     number: "04",
-    title: "Trusted partner",
-    description: "Long-term relationships built on transparency, honest advice, and real results.",
+    titleKey: "why.trusted.title",
+    descriptionKey: "why.trusted.description",
   },
 ];
 
 const WhySection = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="why" className="py-24 md:py-32 bg-primary">
       <div className="container">
@@ -36,21 +39,19 @@ const WhySection = () => {
             transition={{ duration: 0.5 }}
           >
             <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">
-              Why Impulso
+              {t("why.eyebrow")}
             </p>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground mb-6">
-              The consultancy that moves{" "}
-              <span className="text-accent">with</span> you
+              {t("why.title")}
             </h2>
             <p className="text-primary-foreground/60 leading-relaxed mb-8 max-w-md">
-              Impulso means "momentum" — and that's exactly what we create. 
-              We cut through noise and deliver clarity so your organization can accelerate.
+              {t("why.description")}
             </p>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 text-accent hover:text-amber-light font-medium transition-colors group"
             >
-              Start a conversation
+              {t("why.cta")}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>
@@ -70,10 +71,10 @@ const WhySection = () => {
                 </span>
                 <div>
                   <h3 className="text-primary-foreground font-semibold mb-1">
-                    {reason.title}
+                    {t(reason.titleKey)}
                   </h3>
                   <p className="text-primary-foreground/50 text-sm leading-relaxed">
-                    {reason.description}
+                    {t(reason.descriptionKey)}
                   </p>
                 </div>
               </motion.div>

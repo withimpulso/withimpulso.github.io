@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/i18n";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
@@ -17,7 +20,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5 }}
             className="text-accent font-semibold tracking-widest uppercase text-sm mb-6"
           >
-            Boutique IT Consultancy
+            {t("home.eyebrow")}
           </motion.p>
 
           <motion.h1
@@ -26,10 +29,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-primary-foreground leading-tight mb-8"
           >
-            Move Forward with{" "}
-            <span className="text-accent">Clarity</span>,{" "}
-            <span className="text-accent">Control</span> &{" "}
-            <span className="text-accent">Confidence</span>
+            {t("home.title")}
           </motion.h1>
 
           <motion.p
@@ -38,8 +38,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-primary-foreground/70 max-w-2xl mx-auto mb-10"
           >
-            Impulso helps organizations navigate Modern Workplace, Identity, and Security — 
-            delivering expert guidance that turns complexity into momentum.
+            {t("home.description")}
           </motion.p>
 
           <motion.div
@@ -52,13 +51,13 @@ const HeroSection = () => {
               href="#services"
               className="px-8 py-3.5 text-sm font-semibold bg-accent text-accent-foreground rounded-md hover:bg-amber-light transition-colors"
             >
-              Explore Our Services
+              {t("home.services")}
             </a>
             <a
               href="#contact"
               className="px-8 py-3.5 text-sm font-semibold border border-primary-foreground/30 text-primary-foreground rounded-md hover:border-accent hover:text-accent transition-colors"
             >
-              Let's Talk
+              {t("home.talk")}
             </a>
           </motion.div>
         </div>

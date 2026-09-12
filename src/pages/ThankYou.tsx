@@ -4,8 +4,12 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/lib/i18n";
 
 const ThankYouPage = () => {
+  const { language } = useLanguage();
+  const isCatalan = language === "ca";
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -38,7 +42,7 @@ const ThankYouPage = () => {
               transition={{ delay: 0.3, duration: 0.5 }}
               className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6"
             >
-              Thank you!
+              {isCatalan ? "Gràcies!" : "Thank you!"}
             </motion.h1>
 
             {/* Message */}
@@ -48,7 +52,7 @@ const ThankYouPage = () => {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="text-lg md:text-xl text-muted-foreground mb-4 leading-relaxed"
             >
-              We've received your message and appreciate you reaching out.
+              {isCatalan ? "Hem rebut el teu missatge i t'agraïm que t'hagis posat en contacte amb nosaltres." : "We've received your message and appreciate you reaching out."}
             </motion.p>
 
             <motion.p
@@ -57,8 +61,7 @@ const ThankYouPage = () => {
               transition={{ delay: 0.5, duration: 0.5 }}
               className="text-base md:text-lg text-muted-foreground mb-12 leading-relaxed"
             >
-              Our team will review your inquiry and get back to you within one business day. 
-              In the meantime, we've sent a confirmation email to your inbox.
+              {isCatalan ? "El nostre equip revisarà la teva consulta i et respondrà en un dia laborable. Mentrestant, trobaràs un correu de confirmació a la teva safata d'entrada." : "Our team will review your inquiry and get back to you within one business day. In the meantime, we've sent a confirmation email to your inbox."}
             </motion.p>
 
             {/* CTA Buttons */}
@@ -74,14 +77,14 @@ const ThankYouPage = () => {
                   className="w-full sm:w-auto px-8 py-3 h-auto text-base font-semibold"
                 >
                   <Home className="w-4 h-4 mr-2" />
-                  Back to Home
+                  {isCatalan ? "Torna a l'inici" : "Back to Home"}
                 </Button>
               </Link>
               <Link to="/trainings">
                 <Button
                   className="w-full sm:w-auto px-8 py-3 h-auto text-base font-semibold bg-accent text-accent-foreground hover:bg-accent/90"
                 >
-                  Explore Trainings
+                  {isCatalan ? "Descobreix les formacions" : "Explore Trainings"}
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
@@ -95,20 +98,20 @@ const ThankYouPage = () => {
               className="bg-surface rounded-lg p-8 border border-border"
             >
               <h2 className="font-serif text-lg md:text-xl text-foreground mb-4">
-                What happens next?
+                {isCatalan ? "Què passa ara?" : "What happens next?"}
               </h2>
               <ul className="space-y-3 text-sm md:text-base text-muted-foreground text-left">
                 <li className="flex gap-3">
                   <span className="text-accent font-semibold shrink-0">1</span>
-                  <span>Check your email for a confirmation message from our team</span>
+                  <span>{isCatalan ? "Revisa el teu correu per trobar el missatge de confirmació del nostre equip" : "Check your email for a confirmation message from our team"}</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-accent font-semibold shrink-0">2</span>
-                  <span>Our experts will carefully review your inquiry</span>
+                  <span>{isCatalan ? "Els nostres experts revisaran acuradament la teva consulta" : "Our experts will carefully review your inquiry"}</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-accent font-semibold shrink-0">3</span>
-                  <span>We'll reach out within one business day with next steps</span>
+                  <span>{isCatalan ? "Et contactarem en un dia laborable amb els passos següents" : "We'll reach out within one business day with next steps"}</span>
                 </li>
               </ul>
             </motion.div>

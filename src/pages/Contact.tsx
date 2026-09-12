@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/lib/i18n";
 
 const businessDetails = [
   {
@@ -29,6 +30,83 @@ const businessDetails = [
 ];
 
 const ContactPage = () => {
+  const { language } = useLanguage();
+  const copy = language === "ca"
+    ? {
+        eyebrow: "Contacte",
+        title: "Comencem una conversa",
+        intro: "Tant si comences una transformació com si necessites expertesa per a un repte concret, som aquí per ajudar-te.",
+        formTitle: "Envia'ns un missatge",
+        formIntro: "Omple el formulari i et respondrem en un dia laborable.",
+        name: "Nom *",
+        namePlaceholder: "El teu nom",
+        email: "Correu electrònic *",
+        company: "Empresa",
+        companyPlaceholder: "Nom de l'empresa",
+        subject: "Assumpte *",
+        subjectPlaceholder: "Com et podem ajudar?",
+        message: "Missatge *",
+        messagePlaceholder: "Explica'ns el teu projecte o repte...",
+        sending: "Enviant...",
+        send: "Envia el missatge",
+        detailsTitle: "Contacta amb nosaltres",
+        address: "Adreça",
+        emailLabel: "Correu electrònic",
+        hours: "Horari d'atenció",
+        businessHours: "Dilluns - divendres, 09:00 - 17:30",
+        sent: "Missatge enviat correctament",
+        sentDescription: "Revisa el teu correu per veure la resposta automàtica. Et respondrem en un dia laborable.",
+        error: "Error",
+        failed: "No s'ha pogut enviar el missatge. Torna-ho a provar.",
+        unexpected: "S'ha produït un error. Torna-ho a provar.",
+      }
+    : language === "nl"
+    ? {
+        eyebrow: "Contact",
+        title: "Laten we kennismaken",
+        intro: "Of je nu een transformatie start of deskundige hulp nodig hebt bij een specifieke uitdaging, we helpen je graag.",
+        formTitle: "Stuur ons een bericht",
+        formIntro: "Vul het formulier in en we nemen binnen één werkdag contact met je op.",
+        name: "Naam *", namePlaceholder: "Je naam", email: "E-mail *", company: "Bedrijf", companyPlaceholder: "Naam van het bedrijf", subject: "Onderwerp *", subjectPlaceholder: "Hoe kunnen we helpen?", message: "Bericht *", messagePlaceholder: "Vertel ons over je project of uitdaging...", sending: "Verzenden...", send: "Bericht verzenden", detailsTitle: "Neem contact op", address: "Adres", emailLabel: "E-mail", hours: "Openingstijden", businessHours: "Maandag - vrijdag, 09:00 - 17:30", sent: "Bericht succesvol verzonden", sentDescription: "Controleer je e-mail voor onze automatische reactie. We nemen binnen één werkdag contact met je op.", error: "Fout", failed: "Het bericht kon niet worden verzonden. Probeer het opnieuw.", unexpected: "Er is een fout opgetreden. Probeer het opnieuw.",
+      }
+    : language === "es"
+    ? {
+        eyebrow: "Contacto",
+        title: "Empecemos una conversación",
+        intro: "Tanto si inicias una transformación como si necesitas experiencia para un reto concreto, estamos aquí para ayudarte.",
+        formTitle: "Envíanos un mensaje",
+        formIntro: "Completa el formulario y te responderemos en un día laborable.",
+        name: "Nombre *", namePlaceholder: "Tu nombre", email: "Correo electrónico *", company: "Empresa", companyPlaceholder: "Nombre de la empresa", subject: "Asunto *", subjectPlaceholder: "¿Cómo podemos ayudarte?", message: "Mensaje *", messagePlaceholder: "Cuéntanos tu proyecto o reto...", sending: "Enviando...", send: "Enviar mensaje", detailsTitle: "Contacta con nosotros", address: "Dirección", emailLabel: "Correo electrónico", hours: "Horario", businessHours: "Lunes - viernes, 09:00 - 17:30", sent: "Mensaje enviado correctamente", sentDescription: "Revisa tu correo para ver la respuesta automática. Te responderemos en un día laborable.", error: "Error", failed: "No se ha podido enviar el mensaje. Inténtalo de nuevo.", unexpected: "Se ha producido un error. Inténtalo de nuevo.",
+      }
+    : {
+        eyebrow: "Contact",
+        title: "Let's start a conversation",
+        intro: "Whether you're starting a transformation or need expert hands on a specific challenge — we're here to help.",
+        formTitle: "Send us a message",
+        formIntro: "Fill in the form and we'll get back to you within one business day.",
+        name: "Name *",
+        namePlaceholder: "Your name",
+        email: "Email *",
+        company: "Company",
+        companyPlaceholder: "Company name",
+        subject: "Subject *",
+        subjectPlaceholder: "How can we help?",
+        message: "Message *",
+        messagePlaceholder: "Tell us about your project or challenge...",
+        sending: "Sending...",
+        send: "Send Message",
+        detailsTitle: "Get in touch",
+        address: "Address",
+        emailLabel: "Email",
+        hours: "Business Hours",
+        businessHours: "Mon - Fri, 09:00 - 17:30",
+        sent: "Message sent successfully",
+        sentDescription: "Check your email for our auto-reply. We'll get back to you within one business day.",
+        error: "Error",
+        failed: "Failed to send message. Please try again.",
+        unexpected: "An error occurred. Please try again.",
+      };
+  const localizedDetails = [copy.address, copy.emailLabel, copy.hours];
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -95,8 +173,8 @@ const ContactPage = () => {
 
       if (response.ok) {
         toast({
-          title: "Message sent successfully",
-          description: "Check your email for our auto-reply. We'll get back to you within one business day.",
+          title: copy.sent,
+          description: copy.sentDescription,
         });
         setFormData({ name: "", email: "", company: "", subject: "", message: "" });
         // Redirect after a short delay
@@ -105,15 +183,15 @@ const ContactPage = () => {
         }, 1500);
       } else {
         toast({
-          title: "Error",
-          description: "Failed to send message. Please try again.",
+          title: copy.error,
+          description: copy.failed,
           variant: "destructive",
         });
       }
     } catch (error) {
       toast({
-        title: "Error",
-        description: "An error occurred. Please try again.",
+        title: copy.error,
+        description: copy.unexpected,
         variant: "destructive",
       });
     } finally {
@@ -135,14 +213,13 @@ const ContactPage = () => {
             className="max-w-3xl"
           >
             <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">
-              Contact
+              {copy.eyebrow}
             </p>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground mb-6">
-              Let's start a conversation
+              {copy.title}
             </h1>
             <p className="text-primary-foreground/60 text-lg max-w-2xl leading-relaxed">
-              Whether you're starting a transformation or need expert hands on a
-              specific challenge — we're here to help.
+              {copy.intro}
             </p>
           </motion.div>
         </div>
@@ -161,11 +238,10 @@ const ContactPage = () => {
               className="lg:col-span-3"
             >
               <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-2">
-                Send us a message
+                {copy.formTitle}
               </h2>
               <p className="text-muted-foreground mb-8">
-                Fill in the form and we'll get back to you within one business
-                day.
+                {copy.formIntro}
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -175,14 +251,14 @@ const ContactPage = () => {
                       htmlFor="name"
                       className="text-sm font-medium text-foreground mb-1.5 block"
                     >
-                      Name *
+                      {copy.name}
                     </label>
                     <Input
                       id="name"
                       name="name"
                       required
                       maxLength={100}
-                      placeholder="Your name"
+                      placeholder={copy.namePlaceholder}
                       value={formData.name}
                       onChange={handleChange}
                       disabled={isSubmitting}
@@ -193,7 +269,7 @@ const ContactPage = () => {
                       htmlFor="email"
                       className="text-sm font-medium text-foreground mb-1.5 block"
                     >
-                      Email *
+                      {copy.email}
                     </label>
                     <Input
                       id="email"
@@ -215,13 +291,13 @@ const ContactPage = () => {
                       htmlFor="company"
                       className="text-sm font-medium text-foreground mb-1.5 block"
                     >
-                      Company
+                      {copy.company}
                     </label>
                     <Input
                       id="company"
                       name="company"
                       maxLength={100}
-                      placeholder="Company name"
+                      placeholder={copy.companyPlaceholder}
                       value={formData.company}
                       onChange={handleChange}
                       disabled={isSubmitting}
@@ -232,14 +308,14 @@ const ContactPage = () => {
                       htmlFor="subject"
                       className="text-sm font-medium text-foreground mb-1.5 block"
                     >
-                      Subject *
+                      {copy.subject}
                     </label>
                     <Input
                       id="subject"
                       name="subject"
                       required
                       maxLength={200}
-                      placeholder="How can we help?"
+                      placeholder={copy.subjectPlaceholder}
                       value={formData.subject}
                       onChange={handleChange}
                       disabled={isSubmitting}
@@ -252,7 +328,7 @@ const ContactPage = () => {
                     htmlFor="message"
                     className="text-sm font-medium text-foreground mb-1.5 block"
                   >
-                    Message *
+                    {copy.message}
                   </label>
                   <Textarea
                     id="message"
@@ -260,7 +336,7 @@ const ContactPage = () => {
                     required
                     maxLength={2000}
                     rows={5}
-                    placeholder="Tell us about your project or challenge…"
+                    placeholder={copy.messagePlaceholder}
                     value={formData.message}
                     onChange={handleChange}
                     disabled={isSubmitting}
@@ -272,7 +348,7 @@ const ContactPage = () => {
                   disabled={isSubmitting}
                   className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-3 h-auto text-base font-semibold group disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? copy.sending : copy.send}
                   <Send className="w-4 h-4 ml-1 group-hover:translate-x-0.5 transition-transform" />
                 </Button>
               </form>
@@ -288,7 +364,7 @@ const ContactPage = () => {
             >
               <div>
                 <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6">
-                  Get in touch
+                  {copy.detailsTitle}
                 </h2>
                 <div className="space-y-5">
                   {businessDetails.map((detail) => (
@@ -298,7 +374,7 @@ const ContactPage = () => {
                       </div>
                       <div>
                         <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-0.5">
-                          {detail.label}
+                          {localizedDetails[businessDetails.indexOf(detail)]}
                         </p>
                         {detail.href ? (
                           <a
@@ -315,7 +391,7 @@ const ContactPage = () => {
                           </a>
                         ) : (
                           <p className="text-foreground text-sm">
-                            {detail.value}
+                            {businessDetails.indexOf(detail) === 2 ? copy.businessHours : detail.value}
                           </p>
                         )}
                       </div>

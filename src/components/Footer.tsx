@@ -1,6 +1,10 @@
 import { Linkedin } from "lucide-react";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/lib/i18n";
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-primary py-12 border-t border-navy-light/30">
       <div className="container">
@@ -10,19 +14,23 @@ const Footer = () => {
           </a>
           <div className="flex items-center gap-8">
             <a href="/#services" className="text-sm text-primary-foreground/50 hover:text-accent transition-colors">
-              Services
+              {t("nav.services")}
             </a>
             <a href="/#why" className="text-sm text-primary-foreground/50 hover:text-accent transition-colors">
-              Why Impulso
+              {t("nav.why")}
             </a>
             <a href="/trainings" className="text-sm text-primary-foreground/50 hover:text-accent transition-colors">
-              Trainings
+              {t("nav.trainings")}
+            </a>
+            <a href="/blog" className="text-sm text-primary-foreground/50 hover:text-accent transition-colors">
+              {t("nav.blog")}
             </a>
             <a href="/#contact" className="text-sm text-primary-foreground/50 hover:text-accent transition-colors">
-              Contact
+              {t("nav.contact")}
             </a>
           </div>
           <div className="flex items-center gap-4">
+            <LanguageSwitcher />
             <a
               href="https://www.linkedin.com/company/impulsonl"
               target="_blank"
@@ -32,7 +40,7 @@ const Footer = () => {
               <Linkedin className="w-5 h-5" />
             </a>
             <p className="text-xs text-primary-foreground/30">
-              © {new Date().getFullYear()} Impulso. All rights reserved.
+              © {new Date().getFullYear()} Impulso. {t("footer.rights")}
             </p>
           </div>
         </div>

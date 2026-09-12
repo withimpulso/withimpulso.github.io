@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Clock, Users, ArrowRight, Calendar } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/lib/i18n";
 
 const trainings = [
   {
@@ -67,6 +68,8 @@ const categoryColor: Record<string, string> = {
 };
 
 const TrainingsPage = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -81,14 +84,13 @@ const TrainingsPage = () => {
             className="max-w-3xl"
           >
             <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">
-              Trainings
+              {t("trainings.eyebrow")}
             </p>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground mb-6">
-              Level up your team's expertise
+              {t("trainings.title")}
             </h1>
             <p className="text-primary-foreground/60 text-lg max-w-2xl leading-relaxed">
-              Practical, hands-on trainings delivered by senior consultants who work with these
-              technologies every day. No slides-only sessions — real skills, real scenarios.
+              {t("trainings.description")}
             </p>
           </motion.div>
         </div>
@@ -105,13 +107,13 @@ const TrainingsPage = () => {
             className="text-center mb-12"
           >
             <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">
-              Formats
+              {t("trainings.formats")}
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
-              Typical setup
+              {t("trainings.setup")}
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-              Clear outcomes, practical exercises, and take-home material.
+              {t("trainings.setupDescription")}
             </p>
           </motion.div>
 
@@ -123,10 +125,10 @@ const TrainingsPage = () => {
             className="grid sm:grid-cols-2 md:grid-cols-4 gap-6"
           >
             {[
-              { icon: "🏠", label: "Remote or on-site" },
-              { icon: "📅", label: "Half-day / full-day / 2-day" },
-              { icon: "🧪", label: "Live demos + hands-on labs" },
-              { icon: "💬", label: "Q&A and implementation guidance" },
+              { icon: "🏠", label: t("trainings.remote") },
+              { icon: "📅", label: t("trainings.schedule") },
+              { icon: "🧪", label: t("trainings.labs") },
+              { icon: "💬", label: t("trainings.guidance") },
             ].map((item) => (
               <div
                 key={item.label}
@@ -210,17 +212,16 @@ const TrainingsPage = () => {
           >
             <Calendar className="w-10 h-10 text-accent mx-auto mb-6" />
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground mb-4">
-              Need a custom training?
+              {t("trainings.custom.title")}
             </h2>
             <p className="text-primary-foreground/50 mb-8 leading-relaxed">
-              We tailor every session to your team's skill level, environment, and goals.
-              Get in touch to discuss your requirements.
+              {t("trainings.custom.description")}
             </p>
             <a
               href="mailto:hello@impulso.nl"
               className="inline-flex items-center gap-2 px-8 py-3.5 bg-accent text-accent-foreground font-semibold rounded-md hover:bg-amber-light transition-colors group"
             >
-              Request a Training
+              {t("trainings.custom.button")}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>
