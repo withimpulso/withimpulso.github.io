@@ -17,11 +17,8 @@ const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();
   const currentDomain = getCurrentDomain();
   const currentLanguage = languages.find((option) => option.language === language) || languages[0];
-  const currentPath = typeof window === "undefined" ? "/" : `${window.location.pathname}${window.location.search}${window.location.hash}`;
   const getLanguageHref = (domain: string, nextLanguage: Language) => {
-    const destination = new URL(currentPath, "https://withimpulso.com");
-    destination.searchParams.set("lang", nextLanguage);
-    return `https://${domain}${destination.pathname}${destination.search}${destination.hash}`;
+    return `https://${domain}/?lang=${nextLanguage}`;
   };
 
   return (
