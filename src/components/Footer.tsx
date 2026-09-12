@@ -1,6 +1,7 @@
 import { Linkedin } from "lucide-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/lib/i18n";
+import logo from "@/assets/logo-impulso.svg";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -9,8 +10,8 @@ const Footer = () => {
     <footer className="bg-primary py-12 border-t border-navy-light/30">
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <a href="#" className="font-serif text-xl text-primary-foreground tracking-tight">
-            Impulso
+          <a href="/" className="flex items-center">
+            <img src={logo} alt="Impulso" className="h-8 md:h-10" />
           </a>
           <div className="flex items-center gap-8">
             <a href="/#services" className="text-sm text-primary-foreground/50 hover:text-accent transition-colors">
