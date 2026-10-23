@@ -3,7 +3,7 @@ import { useLanguage, type Language } from "@/lib/i18n";
 
 const languages: Array<{ code: string; label: string; domain: string; flag: string; language: Language }> = [
   { code: "EN", label: "English", domain: "withimpulso.com", flag: "🇬🇧", language: "en" },
-  { code: "NL", label: "Nederlands", domain: "withimpulso.nl", flag: "🇳🇱", language: "nl" },
+  { code: "NL", label: "Nederlands", domain: "withimpulso.com", flag: "🇳🇱", language: "nl" },
   { code: "ES", label: "Español", domain: "withimpulso.es", flag: "🇪🇸", language: "es" },
   { code: "CA", label: "Català", domain: "withimpulso.cat", flag: "🏴", language: "ca" },
 ];
