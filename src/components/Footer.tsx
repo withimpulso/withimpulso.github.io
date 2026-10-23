@@ -2,6 +2,7 @@ import { Linkedin } from "lucide-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/lib/i18n";
 import logo from "@/assets/logo-impulso.svg";
+import { COOKIE_SETTINGS_EVENT } from "@/lib/cookieConsent";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -29,6 +30,16 @@ const Footer = () => {
             <a href="/#contact" className="text-sm text-primary-foreground/50 hover:text-accent transition-colors">
               {t("nav.contact")}
             </a>
+            <a href="/privacy" className="text-sm text-primary-foreground/50 hover:text-accent transition-colors">
+              {t("footer.privacy")}
+            </a>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new Event(COOKIE_SETTINGS_EVENT))}
+              className="text-sm text-primary-foreground/50 hover:text-accent transition-colors"
+            >
+              {t("footer.cookieSettings")}
+            </button>
           </div>
           <div className="flex items-center gap-4">
             <LanguageSwitcher />
