@@ -14,6 +14,7 @@ const messages: Record<Language, Messages> = {
     "nav.getInTouch": "Get in Touch",
     "footer.rights": "All rights reserved.",
     "footer.privacy": "Privacy policy",
+    "footer.terms": "Terms and conditions (Dutch)",
     "footer.cookieSettings": "Cookie settings",
     "consent.title": "Your privacy matters",
     "consent.description": "We use essential storage for site preferences. With your permission, Google Analytics helps us understand website usage. You can change your choice at any time.",
@@ -94,6 +95,7 @@ const messages: Record<Language, Messages> = {
     "nav.getInTouch": "Parlem-ne",
     "footer.rights": "Tots els drets reservats.",
     "footer.privacy": "Política de privacitat",
+    "footer.terms": "Condicions generals (neerlandès)",
     "footer.cookieSettings": "Configuració de galetes",
     "consent.title": "La teva privacitat importa",
     "consent.description": "Utilitzem emmagatzematge essencial per recordar les preferències del lloc. Amb el teu permís, Google Analytics ens ajuda a entendre l'ús del web. Pots canviar la teva elecció en qualsevol moment.",
@@ -170,7 +172,7 @@ const messages: Record<Language, Messages> = {
 };
 
 Object.assign(messages.nl, {
-  "nav.services": "Diensten", "nav.why": "Waarom Impulso", "nav.trainings": "Trainingen", "nav.blog": "Blog", "nav.contact": "Contact", "nav.getInTouch": "Neem contact op", "footer.rights": "Alle rechten voorbehouden.", "footer.privacy": "Privacyverklaring", "footer.cookieSettings": "Cookie-instellingen",
+  "nav.services": "Diensten", "nav.why": "Waarom Impulso", "nav.trainings": "Trainingen", "nav.blog": "Blog", "nav.contact": "Contact", "nav.getInTouch": "Neem contact op", "footer.rights": "Alle rechten voorbehouden.", "footer.privacy": "Privacyverklaring", "footer.terms": "Algemene voorwaarden", "footer.cookieSettings": "Cookie-instellingen",
   "consent.title": "Jouw privacy is belangrijk",
   "consent.description": "We gebruiken noodzakelijke opslag voor sitevoorkeuren. Met jouw toestemming helpt Google Analytics ons het websitegebruik te begrijpen. Je kunt je keuze altijd wijzigen.",
   "consent.privacyLink": "Lees onze privacyverklaring",
@@ -194,7 +196,7 @@ Object.assign(messages.nl, {
 });
 
 Object.assign(messages.es, {
-  "nav.services": "Servicios", "nav.why": "Por qué Impulso", "nav.trainings": "Formación", "nav.blog": "Blog", "nav.contact": "Contacto", "nav.getInTouch": "Hablemos", "footer.rights": "Todos los derechos reservados.", "footer.privacy": "Política de privacidad", "footer.cookieSettings": "Preferencias de cookies",
+  "nav.services": "Servicios", "nav.why": "Por qué Impulso", "nav.trainings": "Formación", "nav.blog": "Blog", "nav.contact": "Contacto", "nav.getInTouch": "Hablemos", "footer.rights": "Todos los derechos reservados.", "footer.privacy": "Política de privacidad", "footer.terms": "Condiciones generales (neerlandés)", "footer.cookieSettings": "Preferencias de cookies",
   "consent.title": "Tu privacidad importa",
   "consent.description": "Usamos almacenamiento esencial para las preferencias del sitio. Con tu permiso, Google Analytics nos ayuda a comprender el uso de la web. Puedes cambiar tu elección en cualquier momento.",
   "consent.privacyLink": "Lee nuestra política de privacidad",

@@ -33,6 +33,9 @@ const Footer = () => {
             <a href="/privacy" className="text-sm text-primary-foreground/50 hover:text-accent transition-colors">
               {t("footer.privacy")}
             </a>
+            <a href="/algemene-voorwaarden" className="text-sm text-primary-foreground/50 hover:text-accent transition-colors">
+              {t("footer.terms")}
+            </a>
             <button
               type="button"
               onClick={() => window.dispatchEvent(new Event(COOKIE_SETTINGS_EVENT))}
