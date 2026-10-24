@@ -14,7 +14,7 @@ const messages: Record<Language, Messages> = {
     "nav.getInTouch": "Get in Touch",
     "footer.rights": "All rights reserved.",
     "footer.privacy": "Privacy policy",
-    "footer.terms": "Terms and conditions (Dutch)",
+    "footer.terms": "Terms and conditions",
     "footer.cookieSettings": "Cookie settings",
     "consent.title": "Your privacy matters",
     "consent.description": "We use essential storage for site preferences. With your permission, Google Analytics helps us understand website usage. You can change your choice at any time.",
@@ -95,7 +95,7 @@ const messages: Record<Language, Messages> = {
     "nav.getInTouch": "Parlem-ne",
     "footer.rights": "Tots els drets reservats.",
     "footer.privacy": "Política de privacitat",
-    "footer.terms": "Condicions generals (neerlandès)",
+    "footer.terms": "Termes i condicions",
     "footer.cookieSettings": "Configuració de galetes",
     "consent.title": "La teva privacitat importa",
     "consent.description": "Utilitzem emmagatzematge essencial per recordar les preferències del lloc. Amb el teu permís, Google Analytics ens ajuda a entendre l'ús del web. Pots canviar la teva elecció en qualsevol moment.",
@@ -196,7 +196,7 @@ Object.assign(messages.nl, {
 });
 
 Object.assign(messages.es, {
-  "nav.services": "Servicios", "nav.why": "Por qué Impulso", "nav.trainings": "Formación", "nav.blog": "Blog", "nav.contact": "Contacto", "nav.getInTouch": "Hablemos", "footer.rights": "Todos los derechos reservados.", "footer.privacy": "Política de privacidad", "footer.terms": "Condiciones generales (neerlandés)", "footer.cookieSettings": "Preferencias de cookies",
+  "nav.services": "Servicios", "nav.why": "Por qué Impulso", "nav.trainings": "Formación", "nav.blog": "Blog", "nav.contact": "Contacto", "nav.getInTouch": "Hablemos", "footer.rights": "Todos los derechos reservados.", "footer.privacy": "Política de privacidad", "footer.terms": "Términos y condiciones", "footer.cookieSettings": "Preferencias de cookies",
   "consent.title": "Tu privacidad importa",
   "consent.description": "Usamos almacenamiento esencial para las preferencias del sitio. Con tu permiso, Google Analytics nos ayuda a comprender el uso de la web. Puedes cambiar tu elección en cualquier momento.",
   "consent.privacyLink": "Lee nuestra política de privacidad",

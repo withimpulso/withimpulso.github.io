@@ -14,7 +14,7 @@ const Footer = () => {
           <a href="/" className="flex items-center">
             <img src={logo} alt="Impulso" className="h-8 md:h-10" />
           </a>
-          <div className="flex items-center gap-8">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
             <a href="/#services" className="text-sm text-primary-foreground/50 hover:text-accent transition-colors">
               {t("nav.services")}
             </a>
